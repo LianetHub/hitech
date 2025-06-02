@@ -463,7 +463,7 @@ body {
 }
 
 .swiper-button-prev {
-	@extend %ic, .icon-prev;
+	@extend %ic, .icon-left;
 	right: calc(100% - 2rem);
 	left: auto;
 	@media (min-width: $md5) {
@@ -475,7 +475,7 @@ body {
 	}
 }
 .swiper-button-next {
-	@extend %ic, .icon-next;
+	@extend %ic, .icon-right;
 	left: calc(100% - 2rem);
 	right: auto;
 	@media (min-width: $md5) {
