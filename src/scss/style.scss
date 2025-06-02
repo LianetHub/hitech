@@ -11,11 +11,11 @@
 // ======================================ШРИФТЫ===============================================
 
 // Шрифт по умолчанию
-$fontfamily: "SuisseIntl";
+$fontfamily: "LabGrotesque";
 
 // Шрифт по умолчанию
 
-$md0: 1599.98px;
+$md0: 1699.98px;
 $md1: 1419.98px;
 $md2: 1279.98px;
 $md3: 991.98px;
@@ -27,17 +27,19 @@ $md6: 389.98px;
 
 $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 1920; // Ширина макета
-$maxWidthContainer: rem(1280); // Максимальная ширина ограничивающего контейнера
+$maxWidthContainer: rem(1660); // Максимальная ширина ограничивающего контейнера
 $containerPadding: 30;
 
 // ЦВЕТА
 
 $white: #fff;
-$text: #111827;
-$accent: #4d8a4a;
-
-$green: #01ce22;
-$red: #fa0644;
+$text: #222a26;
+$violet: #6c1d45;
+$red: #fe4c4c;
+$green: #3cbc5d;
+$darkGreen: #144941;
+$grey: #858585;
+$lightGray: #f7f7f7;
 
 $shadow: rem(4) rem(4) rem(100) rgba(66, 114, 63, 0.15);
 

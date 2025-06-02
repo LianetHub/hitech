@@ -1,67 +1,60 @@
-.marked-text {
-	border-radius: 0.3125rem;
-	background: rgba(214, 223, 106, 0.5);
-	padding-inline: 0.25em;
-	margin-inline: -0.25em;
-	@media (min-width: $md1) {
-		white-space: nowrap;
+h1,
+.h1 {
+	font-size: 2.3125rem;
+	font-weight: 700;
+	line-height: 115%;
+	letter-spacing: -0.02313rem;
+	@media (min-width: $md4) {
+		font-size: 3.5rem;
+		line-height: 120%;
+		letter-spacing: -0.035rem;
 	}
 }
 
-.title {
-	font-weight: 500;
+h2,
+.h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 120%;
+	letter-spacing: -0.02rem;
+	@media (min-width: $md4) {
+		font-size: 3rem;
+		letter-spacing: -0.03rem;
+	}
+}
+
+h3,
+.h3 {
 	font-size: 1.75rem;
+	font-weight: 700;
+	line-height: 115%;
 	@media (min-width: $md4) {
-		font-size: 2.25rem;
+		font-size: 2rem;
+		line-height: 120%;
 	}
 }
 
-.title-lg {
-	font-weight: 600;
-	font-size: 1.375rem;
-	@media (min-width: $md4) {
-		font-size: 2.75rem;
-	}
+h4,
+.h4 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 120%;
 }
 
-// .favorite-btn {
-// 	width: rem(30);
-// 	height: rem(30);
-// 	font-size: 1.25rem;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	flex-shrink: 0;
-// 	background: #fff;
-// 	border-radius: 50%;
-// 	&::before {
-// 		@extend %ic, .icon-heart;
-// 		transition: all 0.3s ease 0s;
-// 	}
-// 	@media (any-hover: hover) {
-// 		&:hover {
-// 			color: $accent;
-// 		}
-// 	}
-// 	&.active {
-// 		&::before {
-// 			@extend %ic, .icon-heart-fill;
-// 			color: $accent;
-// 			animation: pulse 0.3s ease-in-out;
-// 			@keyframes pulse {
-// 				0% {
-// 					transform: scale(1);
-// 				}
-// 				50% {
-// 					transform: scale(1.4);
-// 				}
-// 				100% {
-// 					transform: scale(1);
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+/* selected */
+.caption {
+	font-size: 1.1875rem;
+	font-weight: 700;
+	line-height: 120%;
+}
+/* Desktop/Text */
+.text-block {
+	font-size: 1.0625rem;
+	line-height: 124%;
+	@media (min-width: $md4) {
+		font-size: 1.1875rem;
+	}
+}
 
 // .arrow-top-btn {
 // 	border-radius: rem(17);
@@ -102,7 +95,7 @@
 //============ МОДУЛИ ====================
 
 .color-accent {
-	color: $accent;
+	color: $green;
 }
 
 .fw-medium {
@@ -379,7 +372,7 @@ $scrollbarColor: #4d8a4a;
 	border-radius: rem(8);
 	@media (any-hover: hover) {
 		&:hover {
-			background: darken($color: $accent, $amount: 10);
+			background: darken($color: $green, $amount: 10);
 		}
 	}
 }

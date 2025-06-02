@@ -83,7 +83,7 @@
 			gap: 0.25rem;
 			@media (any-hover: hover) {
 				&:hover {
-					color: $accent;
+					color: $green;
 					& .submenu {
 						@media (min-width: $md3) {
 							opacity: 1;
@@ -111,9 +111,9 @@
 		font-weight: 450;
 
 		&.active {
-			color: $accent;
+			color: $green;
 			& + .menu__arrow {
-				color: $accent;
+				color: $green;
 			}
 		}
 
@@ -124,7 +124,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $accent;
+				color: $green;
 			}
 		}
 	}
@@ -170,7 +170,7 @@
 	order: 1;
 	z-index: 11;
 	height: rem(50);
-	color: $accent;
+	color: $green;
 	min-width: rem(50);
 	border-radius: rem(5);
 	padding: rem(12);
