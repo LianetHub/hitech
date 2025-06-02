@@ -1,188 +1,91 @@
 .footer {
-	background: #f9fae9;
-	padding: 3.88rem 0;
+	background: $text;
+	color: $white;
+	padding: 3.75rem 0;
 	// .footer__container
 	&__container {
 	}
-	// .footer__body
-	&__body {
+	// .footer__header
+	&__header {
 		display: flex;
-		flex-wrap: wrap;
-		row-gap: rem(24);
-		margin: 0 rem(-10);
-	}
-	// .footer__main
-	&__main {
-		padding: rem(0) rem(10);
-		order: -1;
-		flex: 0 0 100%;
-		@media (min-width: $md5) {
-			flex: 0 0 50%;
-		}
-		@media (min-width: $md3) {
-			flex: 0 0 25%;
-		}
+		justify-content: space-between;
+		align-items: center;
 	}
 	// .footer__logo
 	&__logo {
 	}
-	// .footer__subtitle
-	&__subtitle {
-		margin-top: 1.59rem;
-		color: #000;
-		font-size: 1rem;
-		font-weight: 300;
-	}
-	// .footer__menu
-	&__menu {
-		display: flex;
-		flex: 0 0 100%;
-		@media (min-width: $md3) {
-			flex: 0 0 50%;
-		}
-	}
-	// .footer__menu-column
-	&__menu-column {
-		flex: 0 0 50%;
-		padding: rem(0) rem(10);
-	}
-	// .footer__menu-caption
-	&__menu-caption {
-		font-size: 1.375rem;
-		font-weight: 500;
-	}
-	// .footer__menu-list
-	&__menu-list {
-		margin-top: rem(30);
-		font-size: 1rem;
-		font-weight: 300;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 1.19rem;
-		& a {
-			transition: color 0.1s ease;
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: underline;
-					color: #f97c4e;
-				}
-			}
-		}
-	}
 	// .footer__contacts
 	&__contacts {
-		padding: rem(0) rem(10);
-		display: flex;
-		flex-direction: column;
-		gap: 1.19rem;
-		order: -1;
-		flex: 0 0 100%;
-		@media (min-width: $md5) {
-			flex: 0 0 50%;
-		}
-		@media (min-width: $md3) {
-			flex: 0 0 25%;
-			order: 0;
-		}
-	}
-	// .footer__phone
-	&__phone {
-		white-space: nowrap;
-		font-size: 1.625rem;
-		font-weight: 600;
-		line-height: 123.077%;
-		& span {
-			color: #4d8a4a;
-		}
-	}
-	// .footer__worktime
-	&__worktime {
-		color: #000;
-		font-size: 1rem;
-		font-weight: 300;
-		line-height: 140%;
-	}
-	// .footer__email
-	&__email {
 		display: flex;
 		align-items: center;
-		color: #000;
-		gap: 0.56rem;
-		font-size: 1rem;
-		font-weight: 300;
-		line-height: 140%;
-		&::before {
-			font-size: 1.1875rem;
-			color: #f97c4e;
-		}
+		gap: 2.5rem;
 	}
 	// .footer__socials
 	&__socials {
 		display: flex;
-		flex-wrap: wrap;
-		gap: rem(10);
+		gap: 1.25rem;
 	}
 	// .footer__social
 	&__social {
-		width: 3.3125rem;
-		height: 3.3125rem;
-		flex-shrink: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #f97c4e;
-		border: rem(1) solid;
-		border-radius: 50%;
-
-		transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-		&.icon-whatsapp-fill {
-			font-size: 1.75rem;
+		font-size: 2rem;
+		transition: color 0.3s ease;
+		&.icon-whatsapp {
+			color: #3cbc5d;
+			@media (any-hover: hover) {
+				&:hover {
+					color: darken($color: #3cbc5d, $amount: 10);
+				}
+			}
 		}
 		&.icon-telegram {
-			font-size: 1.5rem;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: #f97c4e;
-				color: #fff;
-				border-color: #f97c4e;
+			color: #2290ff;
+			@media (any-hover: hover) {
+				&:hover {
+					color: darken($color: #2290ff, $amount: 10);
+				}
 			}
 		}
 	}
-	// .footer__privacy
-	&__privacy {
-		color: #f97c4e;
-		font-size: 1rem;
-		font-weight: 300;
+	// .footer__phone
+	&__phone {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 120%;
+		transition: color 0.3s ease;
 		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: underline;
+				color: $red;
 			}
 		}
 	}
 	// .footer__bottom
 	&__bottom {
-		margin-top: 2.19rem;
-		padding-top: 2.319rem;
-		border-top: 0.125rem solid #e8e8e8;
+		margin-top: rem(30);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
-	// .footer__bottom-text
-	&__bottom-text {
-		display: grid;
-		gap: rem(20);
-		color: #787878;
-		font-size: 0.875rem;
-		font-weight: 300;
-		@media (min-width: $md4) {
-			grid-template-columns: repeat(2, 1fr);
+	// .footer__menu
+	&__menu {
+		& ul {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 1.25rem;
+			& a {
+				transition: color 0.3s ease;
+				@media (any-hover: hover) {
+					&:hover {
+						color: $red;
+					}
+				}
+			}
 		}
 	}
-	// .footer__bottom-copy
-	&__bottom-copy {
-		margin-top: 1.25rem;
-		color: #2d2d2d;
-		font-size: 1rem;
-		font-weight: 300;
+	// .footer__copy
+	&__copy {
+		color: $grey;
+		text-align: right;
+		font-size: 1.1875rem;
+		line-height: 124%;
 	}
 }

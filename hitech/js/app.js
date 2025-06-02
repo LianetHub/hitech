@@ -4,47 +4,37 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
+    // detect touch devices
+
     const isMobile = {
-        Android: function () {
-            return navigator.userAgent.match(/Android/i);
+        isTouchDevice: function () {
+            return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
         },
-        BlackBerry: function () {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function () {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function () {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function () {
-            return navigator.userAgent.match(/IEMobile/i);
+        userAgent: function () {
+            return /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
         },
         any: function () {
-            return (
-                isMobile.Android() ||
-                isMobile.BlackBerry() ||
-                isMobile.iOS() ||
-                isMobile.Opera() ||
-                isMobile.Windows());
-        },
+            return isMobile.isTouchDevice() || isMobile.userAgent();
+        }
     };
 
     function getNavigator() {
+        const body = document.body;
+
         if (isMobile.any() || window.innerWidth < 992) {
-            document.body.classList.remove("_pc");
-            document.body.classList.add("_touch");
+            body.classList.remove('_pc');
+            body.classList.add('_touch');
         } else {
-            document.body.classList.remove("_touch");
-            document.body.classList.add("_pc");
+            body.classList.remove('_touch');
+            body.classList.add('_pc');
         }
     }
 
     getNavigator();
 
-    window.addEventListener('resize', () => {
-        getNavigator()
-    });
+    window.addEventListener('resize', getNavigator);
+
+
 
 
     var phoneInputs = document.querySelectorAll('input[type="tel"]');
@@ -116,12 +106,156 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.value = "";
         }
     }
+
     for (var phoneInput of phoneInputs) {
         phoneInput.addEventListener('keydown', onPhoneKeyDown);
         phoneInput.addEventListener('input', onPhoneInput, false);
         phoneInput.addEventListener('paste', onPhonePaste, false);
     }
 
+
+
+
+    // click handlers
+
+    document.addEventListener('click', (e) => {
+
+        const target = e.target;
+
+        if (target.classList.contains('search__btn')) {
+            if (document.querySelector('.search').classList.contains('active')) {
+                hideSearch()
+            } else {
+                getSearch()
+            }
+        }
+
+        if (target.closest('.icon-menu') || target.classList.contains('menu__close')) {
+            getMenu()
+        }
+
+        if (target.classList.contains('menu__arrow')) {
+
+            let subMenu = target.nextElementSibling;
+
+            if (document.querySelector('.menu__arrow.active') !== target) {
+
+                if (document.querySelector('.submenu.open')) {
+                    document.querySelector('.submenu.open').classList.remove('open');
+                }
+                if (document.querySelector('.menu__arrow.active')) {
+                    document.querySelector('.menu__arrow.active').classList.remove('active');
+                }
+            }
+
+            subMenu.classList.toggle('open');
+            target.classList.toggle('active');
+
+        }
+
+        if (target.matches('.article__full')) {
+            target.classList.toggle('active');
+            target.parentNode.classList.toggle('active');
+            if (target.classList.contains('active')) {
+                target.textContent = 'Скрыть';
+            } else {
+                target.textContent = 'Развернуть';
+            }
+        }
+    });
+
+
+    document.addEventListener('keydown', (e) => {
+
+        if (e.key === "Escape") {
+            if (document.querySelector('.search').classList.contains('active')) {
+                hideSearch()
+            }
+        }
+    });
+
+    document.querySelector('.search__form-input')?.addEventListener('blur', hideSearch)
+
+
+    function getSearch() {
+        document.querySelector('.search').classList.add('active');
+        setTimeout(() => {
+            document.querySelector('.search__form-input').focus();
+        }, 500)
+    }
+
+    function hideSearch() {
+        document.querySelector('.search').classList.remove('active');
+    }
+
+    function getMenu() {
+        document.querySelector('.header').classList.toggle('open-menu');
+        toggleLocking();
+    }
+
+    function toggleLocking(lockClass) {
+
+        const body = document.body;
+        let className = lockClass ? lockClass : "lock";
+        let pagePosition;
+
+        if (body.classList.contains(className)) {
+            pagePosition = parseInt(document.body.dataset.position, 10);
+            body.dataset.position = pagePosition;
+            body.style.top = -pagePosition + 'px';
+        } else {
+            pagePosition = window.scrollY;
+            body.style.top = 'auto';
+            window.scroll({ top: pagePosition, left: 0 });
+            document.body.removeAttribute('data-position');
+        }
+
+        let lockPaddingValue = body.classList.contains(className)
+            ? "0px"
+            : window.innerWidth -
+            document.querySelector(".wrapper").offsetWidth +
+            "px";
+
+        body.style.paddingRight = lockPaddingValue;
+        body.classList.toggle(className);
+
+    }
+
+    // sliders
+
+    if (document.querySelector('.promo__slider')) {
+        new Swiper('.promo__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 16,
+            breakpoints: {
+                991.98: {
+                    slidesPerView: 3
+                }
+            }
+        })
+    }
+
+    if (document.querySelector('.cases__slider-block')) {
+        new Swiper('.cases__slider-block', {
+            spaceBetween: 15,
+            slidesPerView: 1,
+
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: ".cases__next",
+                prevEl: ".cases__prev"
+            },
+            breakpoints: {
+                991.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 18,
+                },
+            }
+        })
+    }
+
+
+    // init spollers
 
     const spollersArray = document.querySelectorAll("[data-spollers]");
     if (spollersArray.length > 0) {
@@ -188,7 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
 
-                matchMedia.addListener(function () {
+                matchMedia.addEventListener("change", function () {
                     initSpollers(spollersArray, matchMedia);
                 });
                 initSpollers(spollersArray, matchMedia);
@@ -262,232 +396,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // click handlers
-
-    document.addEventListener('click', (e) => {
-
-        const target = e.target;
-
-        if (target.classList.contains('search__btn')) {
-            if (document.querySelector('.search').classList.contains('active')) {
-                hideSearch()
-            } else {
-                getSearch()
-            }
-        }
-
-        if (target.closest('.icon-menu') || target.classList.contains('menu__close')) {
-            getMenu()
-        }
-
-        if (target.classList.contains('menu__arrow')) {
-
-            let subMenu = target.nextElementSibling;
-
-            if (document.querySelector('.menu__arrow.active') !== target) {
-
-                if (document.querySelector('.submenu.open')) {
-                    document.querySelector('.submenu.open').classList.remove('open');
-                }
-                if (document.querySelector('.menu__arrow.active')) {
-                    document.querySelector('.menu__arrow.active').classList.remove('active');
-                }
-            }
-
-            subMenu.classList.toggle('open');
-            target.classList.toggle('active');
-
-        }
-
-        if (target.matches('.article__full')) {
-            target.classList.toggle('active');
-            target.parentNode.classList.toggle('active');
-            if (target.classList.contains('active')) {
-                target.textContent = 'Скрыть';
-            } else {
-                target.textContent = 'Развернуть';
-            }
-        }
-    });
-
-
-    document.addEventListener('keydown', (e) => {
-
-        if (e.key === "Escape") {
-            if (document.querySelector('.search').classList.contains('active')) {
-                hideSearch()
-            }
-        }
-    });
-
-    document.querySelector('.search__form-input').addEventListener('blur', hideSearch)
-
-
-    function getSearch() {
-        document.querySelector('.search').classList.add('active');
-        setTimeout(() => {
-            document.querySelector('.search__form-input').focus();
-        }, 500)
-    }
-
-    function hideSearch() {
-        document.querySelector('.search').classList.remove('active');
-    }
-
-    function getMenu() {
-        document.querySelector('.header').classList.toggle('open-menu');
-        toggleLocking();
-    }
-
-    function toggleLocking(lockClass) {
-
-        const body = document.body;
-        let className = lockClass ? lockClass : "lock";
-        let pagePosition;
-
-        if (body.classList.contains(className)) {
-            pagePosition = parseInt(document.body.dataset.position, 10);
-            body.dataset.position = pagePosition;
-            body.style.top = -pagePosition + 'px';
-        } else {
-            pagePosition = window.scrollY;
-            body.style.top = 'auto';
-            window.scroll({ top: pagePosition, left: 0 });
-            document.body.removeAttribute('data-position');
-        }
-
-        let lockPaddingValue = body.classList.contains(className)
-            ? "0px"
-            : window.innerWidth -
-            document.querySelector(".wrapper").offsetWidth +
-            "px";
-
-        body.style.paddingRight = lockPaddingValue;
-        body.classList.toggle(className);
-
-    }
-
-    // sliders
-
-    if (document.querySelector('.promo__slider')) {
-        new Swiper('.promo__slider', {
-            slidesPerView: "auto",
-            spaceBetween: 16,
-            breakpoints: {
-                991.98: {
-                    slidesPerView: 3
-                }
-            }
-        })
-    }
-
-    if (document.querySelector('.cases__slider-block')) {
-        new Swiper('.cases__slider-block', {
-            spaceBetween: 15,
-            slidesPerView: 1,
-
-            watchSlidesProgress: true,
-            navigation: {
-                nextEl: ".cases__next",
-                prevEl: ".cases__prev"
-            },
-            // pagination: {
-            //     el: '.doctors__pagination',
-            //     clickable: true
-            // },
-            breakpoints: {
-                991.98: {
-                    slidesPerView: 2,
-                    spaceBetween: 18,
-                },
-            }
-        })
-    }
-
-
-    // range input
-    document.querySelectorAll('.range__input')?.forEach(sliderInput => {
-
-        const minValue = +sliderInput.min || 0;
-        const maxValue = +sliderInput.max || 100;
-
-        const updateSlider = () => {
-            const percent = Math.round(100 * (+sliderInput.value - minValue) / (maxValue - minValue));
-            sliderInput.style.setProperty('--precent', `${percent}%`);
-        }
-
-        sliderInput.addEventListener('input', () => {
-            updateSlider();
-        });
-
-        updateSlider();
-    });
-
-
-    // calc
-    document.querySelectorAll('.calc__form')?.forEach(calcForm => {
-        const calcType = calcForm.dataset.calc || 'invest';
-
-        const sumInput = calcForm.querySelector('input[name="sum"]');
-        const termInput = calcForm.querySelector('input[name="term"]');
-
-        const sumValue = calcForm.querySelector('.sum-value');
-        const termValue = calcForm.querySelector('.term-value');
-
-        const annualPercentText = calcForm.querySelector('.annual-value');
-        const annualPercent = parseFloat(annualPercentText.textContent) || 25;
-
-        const valueCurrent = calcForm.querySelector('.calc__form-total-value-current');
-        const valueOld = calcForm.querySelector('.calc__form-total-value-old');
-
-
-        function formatNumber(num) {
-            if (num >= 10_000_000) {
-                const rounded = (num / 1_000_000).toFixed(0);
-                return `${rounded} млн ₽`;
-            }
-            return num.toLocaleString('ru-RU').replace(/\s/g, '\u202F') + ' ₽';
-        }
-
-        function getYearText(n) {
-            if (n % 10 === 1 && n % 100 !== 11) return 'год';
-            if ([2, 3, 4].includes(n % 10) && ![12, 13, 14].includes(n % 100)) return 'года';
-            return 'лет';
-        }
-
-        function updateCalculation() {
-            const sum = parseInt(sumInput.value, 10);
-            const term = parseInt(termInput.value, 10);
-            const rate = annualPercent / 100;
-
-            sumValue.textContent = formatNumber(sum);
-            termValue.textContent = `${term} ${getYearText(term)}`;
-
-            if (calcType === 'loan') {
-                // === Расчёт для займа ===
-                const income = Math.round(sum * rate * term); // Проценты без капитализации
-                const oldIncome = Math.round(income * 2);     // Старая доходность, например в 2 раза больше
-
-                if (valueCurrent && valueOld) {
-                    valueCurrent.textContent = formatNumber(income);
-                    valueOld.textContent = formatNumber(oldIncome);
-                }
-            } else {
-                // === Расчёт для инвестиций ===
-                const income = Math.round(sum * Math.pow(1 + rate, term)) - sum;
-                const totalValue = calcForm.querySelector('.calc__form-total-value');
-                if (totalValue) {
-                    totalValue.textContent = formatNumber(income);
-                }
-            }
-        }
-
-        sumInput.addEventListener('input', updateCalculation);
-        termInput.addEventListener('input', updateCalculation);
-
-        updateCalculation();
-    });
-
 
 
 
@@ -496,6 +404,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+// Инициализация библиотеки Fancybox
+// Документация: https://fancyapps.com/fancybox/
+
 if (typeof Fancybox !== "undefined" && Fancybox !== null) {
     Fancybox.bind("[data-fancybox]", {
         dragToClose: false,
@@ -503,6 +415,26 @@ if (typeof Fancybox !== "undefined" && Fancybox !== null) {
     });
 }
 
+
+/**
+ * Выполняет анимацию плавного появления или скрытия HTML-элемента (аналог slideToggle).
+ *
+ * Методы:
+ * 
+ * 1. element.slideToggle(duration, callback)
+ *    Переключает видимость элемента:
+ *    - Если элемент скрыт (высота = 0), он будет плавно показан (slide down).
+ *    - Если элемент видим, он будет скрыт (slide up).
+ *
+ * 2. element.slideUp(duration, callback)
+ *    Плавно скрывает элемент, уменьшая его высоту до 0.
+ *
+ * 3. element.slideDown(duration, callback)
+ *    Плавно показывает элемент, увеличивая его высоту до естественной.
+ *
+ * @param {number} duration - Длительность анимации в миллисекундах.
+ * @param {function} [callback] - Необязательная функция, вызываемая по завершении анимации.
+ */
 
 HTMLElement.prototype.slideToggle = function (duration, callback) {
     if (this.clientHeight === 0) {
