@@ -39,6 +39,9 @@ h4,
 	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 120%;
+	@media (min-width: $md4) {
+		font-size: 1.5rem;
+	}
 }
 
 /* selected */
@@ -359,7 +362,7 @@ h4,
 
 // Стилизация скролла
 
-$scrollbarColor: #4d8a4a;
+$scrollbarColor: $red;
 
 ::-webkit-scrollbar {
 	width: rem(8);

@@ -1,0 +1,30 @@
+[
+    {
+        "image": "@img/products/barcode-scanners.png",
+        "name": "Сканеры штрих-кода"
+    },
+    {
+        "image": "@img/products/pos-peripherals.png",
+        "name": "POS-периферия"
+    },
+    {
+        "image": "@img/products/consumables.png",
+        "name": "Расходные материалы"
+    },
+    {
+        "image": "@img/products/label-printers.png",
+        "name": "Принтеры этикеток и чеков"
+    },
+    {
+        "image": "@img/products/acquiring-terminals.png",
+        "name": "Терминалы эквайринга"
+    },
+    {
+        "image": "@img/products/electronic-scales.png",
+        "name": "Электронные весы"
+    },
+    {
+        "image": "@img/products/pos-terminals.png",
+        "name": "POS-терминалы"
+    }
+]

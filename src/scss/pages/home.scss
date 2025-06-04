@@ -1,0 +1,341 @@
+.promo {
+	padding: rem(10) 0 rem(30);
+	// .promo__container
+	&__container {
+	}
+	// .promo__content
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(30);
+	}
+	// .promo__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+	// .promo__offer
+	&__offer {
+		border-radius: 1.25rem;
+		color: #fff;
+		padding: 4.88rem 2.5rem;
+		background: url("@img/star.svg") calc(100% + 0.5rem) calc(100% + 0.5rem) / 6.5625rem 6.5625rem no-repeat, #222;
+	}
+	// .promo__title
+	&__title {
+		font-size: 3.125rem;
+	}
+	// .promo__benefits
+	&__benefits {
+		margin-top: 2.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+	}
+	// .promo__benefit
+	&__benefit {
+		display: flex;
+		align-items: center;
+		padding: 0.875rem 1.5rem 0.875rem 0.875rem;
+		gap: 0.5rem;
+		border-radius: 1.875rem;
+		border: rem(1) solid;
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 120%;
+	}
+	// .promo__form
+	&__form {
+		margin-top: 1.87rem;
+		border-radius: 1.25rem;
+		background: #f4f7fb;
+		padding: 1.875rem 2.5rem;
+	}
+	// .promo__form-caption
+	&__form-caption {
+	}
+	// .promo__form-fields
+	&__form-fields {
+		margin-top: 1.87rem;
+		display: flex;
+		gap: 1.25rem;
+		.btn {
+			min-width: rem(173);
+		}
+	}
+	// .promo__image
+	&__image {
+		border-radius: rem(20);
+		overflow: hidden;
+		height: 44.4375rem;
+		background: $text;
+	}
+	// .promo__list
+	&__list {
+		position: absolute;
+		inset: 0;
+		padding: 3.12rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 1.25rem;
+		z-index: 2;
+	}
+	// .promo__item
+	&__item {
+		border-radius: 1.25rem;
+		background: rgba(255, 255, 255, 0.55);
+		max-width: 16.375rem;
+		padding: 1.25rem;
+		display: flex;
+		align-items: center;
+		gap: 0.94rem;
+		font-size: 1.1875rem;
+		font-weight: 500;
+		line-height: 115%;
+		&::before {
+			width: 2.5rem;
+			height: 2.5rem;
+			flex-shrink: 0;
+			background: #fff;
+			border-radius: 50%;
+			color: $red;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.services {
+	padding: rem(100) 0 rem(30);
+	// .services__container
+	&__container {
+	}
+	// .services__title
+	&__title {
+	}
+	// .services__list
+	&__list {
+		margin-top: rem(40);
+		display: grid;
+		align-items: start;
+		grid-template-columns: repeat(3, 1fr);
+		gap: rem(30);
+	}
+	// .services__card
+	&__card {
+		border-radius: 1.25rem;
+		border: rem(1.5) solid #f6f6f6;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+	}
+	// .services__card-icon
+	&__card-icon {
+		align-self: flex-end;
+		& img {
+			width: 4.625rem;
+			height: 4.625rem;
+		}
+	}
+	// .services__card-name
+	&__card-name {
+	}
+	// .services__card-desc
+	&__card-desc {
+		margin-top: 1.25rem;
+		font-size: 1.1875rem;
+		line-height: 124%;
+	}
+	// .services__card-btns
+	&__card-btns {
+		margin-top: 1.88rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+	}
+	// .services__card-btn
+	&__card-btn {
+	}
+}
+
+.banner {
+	padding: rem(100) 0 rem(30);
+	// .banner__container
+	&__container {
+	}
+	// .banner__content
+	&__content {
+		border-radius: 1.25rem;
+		color: #fff;
+		padding: 2.5rem;
+		display: grid;
+		align-items: center;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(30);
+		background: url("@img/star.svg") 50% calc(100% - 1rem) / 7.4375rem 7.4375rem no-repeat, $text;
+	}
+	// .banner__main
+	&__main {
+	}
+	// .banner__title
+	&__title {
+	}
+	// .banner__list
+	&__list {
+		margin-top: 2.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+	}
+	// .banner__list-item
+	&__list-item {
+		display: flex;
+		align-items: center;
+		padding: 0.875rem 1.5rem 0.875rem 0.875rem;
+		gap: 0.5rem;
+		border-radius: 1.875rem;
+
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 120%;
+	}
+	// .banner__btn
+	&__btn {
+		margin-top: 1.88rem;
+	}
+	// .banner__image
+	&__image {
+		& img {
+			border-radius: 0.625rem;
+		}
+	}
+}
+
+.products {
+	padding: rem(100) 0 rem(30);
+	// .products__container
+	&__container {
+	}
+	// .products__title
+	&__title {
+	}
+	// .products__list
+	&__list {
+		margin-top: 2.5rem;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: rem(30);
+	}
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-radius: 1.25rem;
+	border: rem(1.5) solid #f6f6f6;
+	padding: 1.25rem;
+	transition: background-color 0.3s ease;
+	@media (any-hover: hover) {
+		&:hover {
+			background: #f4f7fb;
+			.product__image {
+				&::before {
+					background-color: #fff;
+				}
+				& img {
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
+	// .product__image
+	&__image {
+		position: relative;
+		width: 8.0625rem;
+		height: 7.3125rem;
+		flex-shrink: 0;
+		margin-top: 1.38rem;
+		margin-left: 0.75rem;
+		z-index: 1;
+		& img {
+			transform: scale(1);
+			transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: -1.37rem;
+			left: -0.75rem;
+			width: 7.9375rem;
+			height: 7.9375rem;
+			border-radius: 50%;
+			background: #f4f7fb;
+			transition: background-color 0.3s ease;
+			z-index: -1;
+		}
+
+		// @keyframes scale-easeOutElastic {
+		// 	0% {
+		// 		transform: scale(1);
+		// 	}
+
+		// 	16% {
+		// 		transform: scale(1.2);
+		// 	}
+
+		// 	28% {
+		// 		transform: scale(1.1);
+		// 	}
+
+		// 	44% {
+		// 		transform: scale(1.15);
+		// 	}
+
+		// 	100% {
+		// 		transform: scale(1.15);
+		// 	}
+		// }
+
+		// @keyframes scale-easeOutElastic-reverse {
+		// 	0% {
+		// 		transform: scale(1.15);
+		// 	}
+
+		// 	16% {
+		// 		transform: scale(0.9);
+		// 	}
+
+		// 	28% {
+		// 		transform: scale(1.1);
+		// 	}
+
+		// 	44% {
+		// 		transform: scale(1);
+		// 	}
+
+		// 	100% {
+		// 		transform: scale(1);
+		// 	}
+		// }
+	}
+	// .product__name
+	&__name {
+		margin-top: 2.5rem;
+		margin-bottom: auto;
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	// .product__btn
+	&__btn {
+		margin-top: 1.25rem;
+	}
+}

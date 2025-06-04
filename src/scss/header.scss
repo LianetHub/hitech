@@ -1,3 +1,104 @@
+.header {
+	// .header__container
+	&__container {
+	}
+	// .header__top
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 3.67rem;
+		border-bottom: rem(1.5) solid #dadada;
+		padding: 1.25rem 0rem;
+	}
+	// .header__menu-toggler
+	&__menu-toggler {
+	}
+	// .header__logo
+	&__logo {
+		max-width: 12.25106rem;
+		margin-right: auto;
+	}
+	// .header__nav
+	&__nav {
+	}
+	// .header__nav-list
+	&__nav-list {
+		display: flex;
+		gap: 2.5rem;
+	}
+	// .header__nav-item
+	&__nav-item {
+	}
+	// .header__nav-link
+	&__nav-link {
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 115%;
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	// .header__socials
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: rem(14);
+	}
+	// .header__socials-title
+	&__socials-title {
+		font-size: 0.875rem;
+		line-height: 115%;
+		max-width: rem(92);
+	}
+	// .header__socials-items
+	&__socials-items {
+		display: flex;
+		gap: rem(10);
+	}
+	// .header__socials-item
+	&__socials-item {
+		font-size: 2rem;
+		transition: color 0.3s ease;
+		&.icon-whatsapp {
+			color: #3cbc5d;
+			@media (any-hover: hover) {
+				&:hover {
+					color: darken($color: #3cbc5d, $amount: 10);
+				}
+			}
+		}
+		&.icon-telegram {
+			color: #2290ff;
+			@media (any-hover: hover) {
+				&:hover {
+					color: darken($color: #2290ff, $amount: 10);
+				}
+			}
+		}
+	}
+	// .header__phone
+	&__phone {
+		font-size: 1.625rem;
+		font-weight: 700;
+		line-height: 115%;
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	// .header__btn
+	&__btn {
+	}
+	// .header__menu
+	&__menu {
+	}
+}
+
 .menu {
 	background: #fff;
 	display: flex;
@@ -42,15 +143,7 @@
 		flex: 1 1 auto;
 		gap: 1.94rem;
 	}
-	// .menu__body
-	&__body {
-		flex: 1 1 auto;
-		@media (max-width: $md3) {
-			max-width: rem(720);
-			width: 100%;
-			margin: 0 auto;
-		}
-	}
+
 	// .menu__list
 	&__list {
 		position: relative;
@@ -59,6 +152,7 @@
 		flex-direction: column;
 		gap: 1em;
 		justify-content: flex-start;
+		width: 100%;
 		@media (min-width: $md3) {
 			gap: 1rem;
 			flex-direction: row;
@@ -67,20 +161,22 @@
 		}
 		@media (min-width: $md1) {
 			justify-content: space-between;
-			font-size: 1rem;
+			font-size: 1.125rem;
+			font-weight: 500;
+			line-height: 115%;
 		}
 	}
 	// .menu__item
 	&__item {
 		display: flex;
 		align-items: center;
-		&.menu-parent {
+		&--parent {
 			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			flex-wrap: wrap;
-			gap: 0.25rem;
+			gap: 0.5rem;
 			@media (any-hover: hover) {
 				&:hover {
 					color: $green;
@@ -134,11 +230,12 @@
 		display: flex;
 		align-items: center;
 		color: currentColor;
-
+		width: rem(14);
+		height: rem(14);
 		&::before {
 			order: 1;
+			font-size: 0.75rem;
 			transition: transform 0.3s ease 0s;
-			font-size: 0.5em;
 		}
 		&.active {
 			&::before {
@@ -146,7 +243,6 @@
 			}
 		}
 	}
-
 	// .menu__callback
 	&__callback {
 		margin-top: 2rem;

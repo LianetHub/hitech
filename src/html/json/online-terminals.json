@@ -1,0 +1,22 @@
+[
+    {
+        "image": "@img/products/smart.png",
+        "name": "Смарт-терминалы"
+    },
+    {
+        "image": "@img/products/fiscal-storage-devices.png",
+        "name": "Фискальные накопители и ОФД"
+    },
+    {
+        "image": "@img/products/autonomous-cash-registers.png",
+        "name": "Автономные кассы"
+    },
+    {
+        "image": "@img/products/fiscal-registrars.png",
+        "name": "Фискальные регистраторы"
+    },
+    {
+        "image": "@img/products/accessories-for-cash-registers.png",
+        "name": "Аксессуары для касс"
+    }
+]

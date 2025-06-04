@@ -33,7 +33,7 @@ $containerPadding: 30;
 // ЦВЕТА
 
 $white: #fff;
-$text: #222a26;
+$text: #222;
 $violet: #6c1d45;
 $red: #fe4c4c;
 $green: #3cbc5d;
@@ -64,3 +64,5 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 //=======================================
 
 // СТИЛИ СТРАНИЦ
+
+@import "pages/home";
