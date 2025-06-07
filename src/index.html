@@ -143,7 +143,114 @@
                         </ul>
                     </div>
                 </section>
+                <section class="products">
+                    <div class="products__container">
+                        <h2 class="products__title">
+                            Программное обеспечение
+                        </h2>
+                        <ul class="products__list">
+                            @@loop('html/templates/_product.html', './html/json/soft.json')
+                        </ul>
+                    </div>
+                </section>
+                <section class="support">
+                    <div class="support__container">
+                        <h2 class="support__title title">Поможем с&nbsp;регистрацией в&nbsp;Честном ЗНАКе и&nbsp;настройкой оборудования под&nbsp;ключ.</h2>
+                        <div class="support__body">
+                            <div class="support__slider swiper">
+                                <div class="swiper-wrapper">
+                                    <a href="" class="support__item swiper-slide">
+                                        <span class="support__item-image">
+                                            <img src="@img/support/01.jpg" class="cover-image" alt="Постер">
+                                        </span>
+                                        <span class="support__item-name">Маркировка товаров</span>
+                                    </a>
+                                    <a href="" class="support__item swiper-slide">
+                                        <span class="support__item-image">
+                                            <img src="@img/support/02.jpg" class="cover-image" alt="Постер">
+                                        </span>
+                                        <span class="support__item-name">Регистрация кассовой техники</span>
+                                    </a>
+                                    <a href="" class="support__item swiper-slide">
+                                        <span class="support__item-image">
+                                            <img src="@img/support/03.jpg" class="cover-image" alt="Постер">
+                                        </span>
+                                        <span class="support__item-name">ЕГАИС</span>
+                                    </a>
+                                    <a href="" class="support__item swiper-slide">
+                                        <span class="support__item-image">
+                                            <img src="@img/support/04.jpg" class="cover-image" alt="Постер">
+                                        </span>
+                                        <span class="support__item-name">Обслуживание кассовой техники</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="" class="support__btn btn btn-grey-outline icon-chevron-right">Подробнее</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="consult">
+                    <div class="consult__container">
+                        <div class="consult__body">
+                            <div class="consult__main">
+                                <h2 class="consult__title">Подберём только нужные решения для&nbsp;вашего бизнеса&nbsp;— без&nbsp;переплат и&nbsp;лишних функций</h2>
+                                <p class="consult__desc h4">Мы&nbsp;проконсультируем, изучим ваши задачи и&nbsp;порекомендуем только те&nbsp;инструменты, которые:</p>
+                                <ul class="consult__list text-block">
+                                    <li class="consult__list-item icon-check-alternate">Сэкономят вам деньги — подберём оптимальный вариант;</li>
+                                    <li class="consult__list-item icon-check-alternate">Автоматизируют рутину — отчётность, документооборот, учёт;</li>
+                                    <li class="consult__list-item icon-check-alternate">Избавят от проблем — штрафы, ошибки, потеря времени.</li>
+                                </ul>
+                            </div>
+                            <form action="#" class="consult__form">
+                                <h3 class="consult__form-title">Оставьте заявку на&nbsp;консультацию</h3>
+                                <input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+                                <input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+                                <div class="form__bottom">
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="privacy" checked class="form__checkbox-input hidden" hidden>
+                                        <span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+                                    </label>
+                                    <button type="submit" class="form__btn btn btn-primary">Подобрать</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_reviews.html', {})
+                <section class="about">
+                    <div class="about__container">
+                        <div class="about__body">
+                            <div class="about__offer">
+                                <h2 class="about__title">
+                                    ООО «ЦИТ Хай-Тёк» <br>
+                                    Надёжные решения для бизнеса
+                                </h2>
+                                <p class="about__desc h4">Официальный партнёр СКБ Контур в Норильске. Подключим сервисы, выпустим ЭП и обучим ваших сотрудников.</p>
+                                <a href="" class="about__btn btn btn-primary icon-chevron-right">Подробнее</a>
+                            </div>
+                            <ul class="about__numbers">
+                                <li class="about__numbers-item">
+                                    <div class="about__numbers-caption">2001</div>
+                                    <div class="about__numbers-desc">Год начала работы ООО «ЦИТ Хай-Тёк»</div>
+                                </li>
+                                <li class="about__numbers-item">
+                                    <div class="about__numbers-caption">2005</div>
+                                    <div class="about__numbers-desc">год-начало партнёрства с СКБ Контур</div>
+                                </li>
+                                <li class="about__numbers-item">
+                                    <div class="about__numbers-caption">6</div>
+                                    <div class="about__numbers-desc">сертифицированных специалистов с опытом и регулярным обучением</div>
+                                </li>
+                                <li class="about__numbers-item">
+                                    <div class="about__numbers-caption">3000+</div>
+                                    <div class="about__numbers-desc">довольных клиентов — большинство компаний и ИП в регионе выбирают нас</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
                 @@include('html/_faq.html', {})
+                @@include('html/_news.html', {})
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

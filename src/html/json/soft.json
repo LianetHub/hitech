@@ -1,0 +1,22 @@
+[
+    {
+        "image": "@img/software/1c.png",
+        "className": "product__image--center",
+        "name": "1С Предприятие"
+    },
+    {
+        "image": "@img/software/Kaspersky.png",
+        "className": "product__image--center",
+        "name": "Kaspersky"
+    },
+    {
+        "image": "@img/software/NormaCS.png",
+        "className": "product__image--center",
+        "name": "NormaCS"
+    },
+    {
+        "image": "@img/software/Microsoft.png",
+        "className": "product__image--center",
+        "name": "Microsoft"
+    }
+]

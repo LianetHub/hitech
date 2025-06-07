@@ -66,17 +66,19 @@ body {
 	&::after {
 		display: none;
 	}
+	position: static;
+	margin: 0;
+	transform: none;
 	transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 	z-index: 2;
-	width: 2.875rem;
-	height: 2.875rem;
+	width: 2.625rem;
+	height: 2.625rem;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #406f3d;
-	color: $white;
-	box-shadow: 0 0 rem(9) rgba(0, 0, 0, 0.06);
+	color: #858585;
+	border: rem(1.5) solid #858585;
 	&:disabled,
 	&.swiper-button-disabled,
 	&[aria-disabled="true"] {
@@ -97,27 +99,9 @@ body {
 
 .swiper-button-prev {
 	@extend %ic, .icon-left;
-	right: calc(100% - 2rem);
-	left: auto;
-	@media (min-width: $md5) {
-		left: auto;
-		right: calc(100% - 1.5rem);
-	}
-	@media (min-width: $md2) {
-		right: calc(100% + 1.19rem);
-	}
 }
 .swiper-button-next {
 	@extend %ic, .icon-right;
-	left: calc(100% - 2rem);
-	right: auto;
-	@media (min-width: $md5) {
-		right: auto;
-		left: calc(100% - 1.5rem);
-	}
-	@media (min-width: $md2) {
-		left: calc(100% + 1.19rem);
-	}
 }
 
 .swiper-pagination {

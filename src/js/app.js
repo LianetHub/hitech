@@ -254,6 +254,35 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    if (document.querySelector('.support__slider')) {
+        new Swiper('.support__slider', {
+            slidesPerView: 4,
+            spaceBetween: 30
+        })
+    }
+
+    if (document.querySelector('.reviews__slider')) {
+        new Swiper('.reviews__slider', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".reviews__next",
+                prevEl: ".reviews__prev"
+            }
+        })
+    }
+
+    if (document.querySelector('.news__slider')) {
+        new Swiper('.news__slider', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".news__next",
+                prevEl: ".news__prev"
+            }
+        })
+    }
+
 
     // init spollers
 
