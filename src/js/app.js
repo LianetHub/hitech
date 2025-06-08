@@ -341,6 +341,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    if (document.querySelectorAll('.products__carousel').length > 0) {
+        document.querySelectorAll('.products__carousel').forEach(function (slider) {
+            new Swiper(slider, {
+                slidesPerView: "auto",
+                spaceBetween: 30,
+                watchOverflow: true,
+                pagination: {
+                    el: slider.querySelector(".products__pagination"),
+                    clickable: true,
+                },
+            })
+        })
+
+    }
+
 
     function getMobileSlider(sliderName, options) {
 

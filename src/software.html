@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Программное обеспечение'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 13
+            })
+            <main class="page">
+                <nav aria-label="Постраничная навигация" class="breadcrumbs">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link">Главная страница</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link active">Программное обеспечение</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="products">
+                    <div class="products__container">
+                        <h1 class="products__title">Программное обеспечение</h1>
+                        <div class="products__carousel swiper">
+                            <ul class="swiper-wrapper">
+                                @@loop('./html/templates/_product-large.html', './html/json/soft-large.json')
+                            </ul>
+                            <div class="products__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="consult">
+                    <div class="consult__container">
+                        <div class="consult__body">
+                            <div class="consult__main">
+                                <h2 class="consult__title">Не знаете какой тариф выбрать?</h2>
+                                <p class="consult__desc h4">Наши специалисты проконсультируют по тарифным планам и возможностям продукта, порекомендуют только те инструменты, которые:</p>
+                                <ul class="consult__list text-block">
+                                    <li class="consult__list-item icon-check-alternate">Сэкономят вам деньги — подберём оптимальный вариант;</li>
+                                    <li class="consult__list-item icon-check-alternate">Автоматизируют рутину — отчётность, документооборот, учёт;</li>
+                                    <li class="consult__list-item icon-check-alternate">Избавят от проблем — штрафы, ошибки, потеря времени.</li>
+                                </ul>
+                            </div>
+                            @@include('./html/_consult-form.html')
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

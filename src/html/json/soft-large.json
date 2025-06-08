@@ -1,0 +1,30 @@
+[
+    {
+        "className": " swiper-slide",
+        "image": "@img/software/1C-Enterprise-package.png",
+        "name": "1С Предприятие",
+        "desc": "Универсальная платформа для автоматизации бухгалтерского, управленческого учёта и бизнес-процессов предприятий.",
+        "price": "7&nbsp;200"
+    },
+    {
+        "className": " swiper-slide",
+        "image": "@img/software/Microsoft-package.png",
+        "name": "Microsoft",
+        "desc": "Разрабатывает программное обеспечение, включая операционные системы, офисные приложения, облачные сервисы.",
+        "price": "7&nbsp;200"
+    },
+    {
+        "className": " swiper-slide",
+        "image": "@img/software/Kaspersky-package.png",
+        "name": "Kaspersky",
+        "desc": "Программное обеспечение для кибербезопасности, защищающее устройства от вирусов, вредоносных программ и кибератак.",
+        "price": "7&nbsp;200"
+    },
+    {
+        "className": " swiper-slide",
+        "image": "@img/software/NormaCS-package.png",
+        "name": "NormaCS",
+        "desc": "Программный комплекс для автоматизации работы с нормативно-технической документацией в проектировании и строительстве",
+        "price": "7&nbsp;200"
+    }
+]

@@ -213,18 +213,7 @@
                                     <li class="consult__list-item icon-check-alternate">Избавят от проблем — штрафы, ошибки, потеря времени.</li>
                                 </ul>
                             </div>
-                            <form action="#" class="consult__form">
-                                <h3 class="consult__form-title">Оставьте заявку на&nbsp;консультацию</h3>
-                                <input type="text" class="form__control" name="name" placeholder="Ваше имя*">
-                                <input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
-                                <div class="form__bottom">
-                                    <label class="form__checkbox">
-                                        <input type="checkbox" name="privacy" checked class="form__checkbox-input hidden" hidden>
-                                        <span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
-                                    </label>
-                                    <button type="submit" class="form__btn btn btn-primary">Подобрать</button>
-                                </div>
-                            </form>
+                            @@include('./html/_consult-form.html')
                         </div>
                     </div>
                 </section>

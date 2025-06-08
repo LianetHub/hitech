@@ -111,6 +111,7 @@
 		position: relative;
 		min-height: 25rem;
 		width: 100%;
+		background: $grey;
 		@media (min-width: $md5) {
 			min-height: 37.625rem;
 		}

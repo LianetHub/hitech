@@ -423,136 +423,6 @@
 	}
 }
 
-.products {
-	padding: rem(30) 0 rem(30);
-	@media (min-width: $md4) {
-		padding: rem(60) 0 rem(30);
-	}
-	@media (min-width: $md2) {
-		padding: rem(100) 0 rem(30);
-	}
-	// .products__container
-	&__container {
-	}
-	// .products__title
-	&__title {
-	}
-	// .products__slider
-	&__slider {
-		margin-top: 2rem;
-		overflow: visible;
-		@media (min-width: $md4) {
-			margin-top: 2.5rem;
-			display: grid;
-			gap: rem(30);
-			grid-template-columns: repeat(3, 1fr);
-			.swiper-wrapper {
-				display: contents;
-			}
-		}
-		@media (min-width: $md2) {
-			grid-template-columns: repeat(5, 1fr);
-		}
-	}
-	// .products__pagination
-	&__pagination {
-		@media (min-width: $md4) {
-			display: none;
-		}
-	}
-}
-
-.product {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	border-radius: 1.25rem;
-	border: rem(1.5) solid #f6f6f6;
-	padding: 1.25rem;
-	transition: background-color 0.3s ease;
-	&.swiper-slide {
-		width: 18.4375rem;
-		height: auto;
-		&.swiper-slide-active {
-			background: #f4f7fb;
-			.product__image {
-				&::before {
-					background-color: #fff;
-				}
-			}
-		}
-		@media (min-width: $md4) {
-			width: 100%;
-		}
-	}
-	@media (any-hover: hover) {
-		&:hover {
-			background: #f4f7fb;
-			.product__image {
-				&::before {
-					background-color: #fff;
-				}
-				& img {
-					transform: scale(1.15);
-				}
-			}
-		}
-	}
-	// .product__image
-	&__image {
-		position: relative;
-		width: 8.0625rem;
-		height: 7.3125rem;
-		flex-shrink: 0;
-		margin-top: 1.38rem;
-		margin-left: 0.75rem;
-		z-index: 1;
-		& img {
-			transform: scale(1);
-			transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			top: -1.37rem;
-			left: -0.75rem;
-			width: 7.9375rem;
-			height: 7.9375rem;
-			border-radius: 50%;
-			background: #f4f7fb;
-			transition: background-color 0.3s ease;
-			z-index: -1;
-		}
-		&--center {
-			margin-top: 0;
-			margin-left: 0;
-			margin-bottom: 1rem;
-			& ~ .product__btn {
-				margin-top: 3rem;
-			}
-			&::before {
-				top: 0;
-				left: 0;
-			}
-		}
-	}
-	// .product__name
-	&__name {
-		margin-top: 2.5rem;
-		margin-bottom: auto;
-		transition: color 0.3s ease;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
-	}
-	// .product__btn
-	&__btn {
-		margin-top: 1.25rem;
-	}
-}
-
 .support {
 	padding: rem(30) 0 rem(30);
 	@media (min-width: $md4) {
@@ -660,6 +530,7 @@
 		}
 		@media (min-width: $md2) {
 			align-items: center;
+			justify-content: space-between;
 			flex-direction: row;
 		}
 		@media (min-width: $md1) {
@@ -668,6 +539,7 @@
 	}
 	// .consult__main
 	&__main {
+		align-self: flex-start;
 	}
 	// .consult__title
 	&__title {
@@ -675,6 +547,7 @@
 	// .consult__desc
 	&__desc {
 		margin-top: 1.5rem;
+		max-width: 44.5rem;
 		@media (min-width: $md5) {
 			margin-top: 1.87rem;
 		}
