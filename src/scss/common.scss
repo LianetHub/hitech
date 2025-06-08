@@ -425,6 +425,16 @@ body {
 	&__slider {
 		margin-top: 2rem;
 		overflow: visible;
+		&--large {
+			@media (min-width: $md4) {
+				grid-template-columns: repeat(2, 1fr) !important;
+				.product__desc {
+					margin-top: rem(20);
+					color: #222;
+					margin-bottom: auto;
+				}
+			}
+		}
 		@media (min-width: $md4) {
 			margin-top: 2.5rem;
 			display: grid;
@@ -440,14 +450,6 @@ body {
 		.products__pagination {
 			@media (min-width: $md4) {
 				display: none;
-			}
-		}
-		&--large {
-			grid-template-columns: repeat(2, 1fr);
-			.product__desc {
-				margin-top: rem(20);
-				color: #222;
-				margin-bottom: auto;
 			}
 		}
 	}

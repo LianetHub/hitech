@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "LabGrotesque";
+  font-display: swap;
+  src: url("../fonts/LabGrotesque-Bold.woff2") format("woff2"), url("../fonts/LabGrotesque-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -19,14 +27,6 @@
   font-display: swap;
   src: url("../fonts/LabGrotesque-Medium.woff2") format("woff2"), url("../fonts/LabGrotesque-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "LabGrotesque";
-  font-display: swap;
-  src: url("../fonts/LabGrotesque-Bold.woff2") format("woff2"), url("../fonts/LabGrotesque-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -1438,17 +1438,6 @@ body {
 .products__slider {
   margin-top: 2rem;
   overflow: visible;
-}
-
-.products__slider--large {
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.products__slider--large .product__desc {
-  margin-top: 1.25rem;
-  color: #222;
-  margin-bottom: auto;
 }
 
 .products__carousel {
@@ -4581,6 +4570,17 @@ body {
 
   .products {
     padding: 3.75rem 0 1.875rem;
+  }
+
+  .products__slider--large {
+    -ms-grid-columns: (1fr)[2] !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .products__slider--large .product__desc {
+    margin-top: 1.25rem;
+    color: #222;
+    margin-bottom: auto;
   }
 
   .products__slider {

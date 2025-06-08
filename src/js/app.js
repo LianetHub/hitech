@@ -353,13 +353,24 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.querySelectorAll('.products__carousel').length > 0) {
         document.querySelectorAll('.products__carousel').forEach(function (slider) {
             new Swiper(slider, {
-                slidesPerView: "auto",
+                slidesPerView: 1,
                 spaceBetween: 30,
                 watchOverflow: true,
                 pagination: {
                     el: slider.querySelector(".products__pagination"),
                     clickable: true,
                 },
+                breakpoints: {
+                    767.98: {
+                        slidesPerView: 2,
+                    },
+                    1279.98: {
+                        slidesPerView: 3,
+                    },
+                    1699.98: {
+                        slidesPerView: 4,
+                    }
+                }
             })
         })
     }
