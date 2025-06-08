@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Фокус'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 5
+            })
+            <main class="page">
+                <nav aria-label="Постраничная навигация" class="breadcrumbs">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link">Главная страница</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link active">Фокус</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="promo">
+                    <div class="promo__container">
+                        <div class="promo__content">
+                            <div class="promo__column">
+                                <div class="promo__offer promo__offer--green">
+                                    <div class="promo__offer-header">
+                                        <div class="promo__icon">
+                                            <img src="@img/icons/focus-74.svg" alt="Иконка">
+                                        </div>
+                                        <h1 class="promo__heading">Фокус</h1>
+                                    </div>
+                                    <p class="promo__caption h3">Проверяйте контрагентов за минуту — все риски в одном окне</p>
+                                    <p class="promo__desc text-block">Получайте полную сводку о любой компании или ИП: ЕГРЮЛ/ЕГРИП, судебные дела, госзакупки, долги, признаки фирм-однодневок и другие риски. Ничего не упустите — принимайте решения на достоверных данных.</p>
+                                </div>
+                                <form action="#" class="promo__form">
+                                    <div class="promo__form-caption h4">Оставьте заявку, мы&nbsp;подберём самые выгодные и&nbsp;эффективные решения для&nbsp;вашего бизнеса</div>
+                                    <div class="promo__form-fields">
+                                        <input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+                                        <input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+                                        <button type="submit" class="btn btn-secondary">Подобрать</button>
+                                    </div>
+                                    <label class="form__checkbox form__checkbox--green">
+                                        <input type="checkbox" name="privacy" class="form__checkbox-input hidden" hidden>
+                                        <span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="promo__column">
+                                <div class="promo__image promo__image--medium">
+                                    <img src="@img/promo/focus.jpg" class="cover-image" alt="Промо фото">
+                                </div>
+                                <ul class="promo__list promo__list--end promo__list--green">
+                                    <li class="promo__item icon-kontur">Официальный партнёр «Контур»</li>
+                                    <li class="promo__item icon-support">Техподдержка 24/7</li>
+                                    <li class="promo__item icon-connect">Быстрое подключение</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="focus">
+                    <div class="focus__container">
+                        <h2 class="focus__title">В Фокусе представлены данные из шести особых реестров ФНС:</h2>
+                        <div class="focus__slider swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="focus__item swiper-slide">
+                                    <div class="focus__item-image">
+                                        <img src="@img/focus/01.jpg" class="cover-image" alt="Постер">
+                                    </div>
+                                    <div class="focus__item-body">
+                                        <h3 class="focus__item-title">«Массовые» руководители, учредители + массовые адреса</h3>
+                                        <p class="focus__item-desc text-block">Исключает риск: сотрудничества с фирмами-однодневками</p>
+                                    </div>
+                                </li>
+                                <li class="focus__item swiper-slide">
+                                    <div class="focus__item-image">
+                                        <img src="@img/focus/02.jpg" class="cover-image" alt="Постер">
+                                    </div>
+                                    <div class="focus__item-body">
+                                        <h3 class="focus__item-title">Непредставление налоговой отчётности в течение года</h3>
+                                        <p class="focus__item-desc text-block">Исключает риск:</p>
+                                        <ul class="focus__item-list  text-block">
+                                            <li>Налоговых проблем у контрагента</li>
+                                            <li>Внезапной ликвидации компании</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="focus__item swiper-slide">
+                                    <div class="focus__item-image">
+                                        <img src="@img/focus/03.jpg" class="cover-image" alt="Постер">
+                                    </div>
+                                    <div class="focus__item-body">
+                                        <h3 class="focus__item-title">Отсутствие у ФНС связи с организацией по адресу её регистрации</h3>
+                                        <p class="focus__item-desc text-block">Исключает риск: контракта с «несуществующей» компанией</p>
+                                    </div>
+                                </li>
+                                <li class="focus__item swiper-slide">
+                                    <div class="focus__item-image">
+                                        <img src="@img/focus/04.jpg" class="cover-image" alt="Постер">
+                                    </div>
+                                    <div class="focus__item-body">
+                                        <h3 class="focus__item-title">Налоговая задолженность более&nbsp;1&nbsp;000 ₽</h3>
+                                        <p class="focus__item-desc text-block">Исключает риск:</p>
+                                        <ul class="focus__item-list  text-block">
+                                            <li>Финансовой нестабильности</li>
+                                            <li>Блокировки счётов контрагента</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="focus__item swiper-slide">
+                                    <div class="focus__item-image">
+                                        <img src="@img/focus/05.jpg" class="cover-image" alt="Постер">
+                                    </div>
+                                    <div class="focus__item-body">
+                                        <h3 class="focus__item-title">Дисквалифицированные лица</h3>
+                                        <p class="focus__item-desc text-block">Исключает риск:</p>
+                                        <ul class="focus__item-list  text-block">
+                                            <li>Недействительных договоров (подписаны дисквалифицированным лицом)</li>
+                                            <li>Судебных споров по сделкам</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="focus__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="counterparty">
+                    <div class="counterparty__container">
+                        <form action="#" class="counterparty__form">
+                            <h2 class="counterparty__title">Узнайте о своём контрагенте</h2>
+                            <div class="counterparty__fields">
+                                <input type="text" name="counterparty" class="form__control" placeholder="Введите ИНН, ОГРН, название компании, ФИО или адрес*">
+                                <textarea name="counterparty" class="form__control" placeholder="Введите ИНН, ОГРН, название компании, ФИО или адрес*"></textarea>
+                                <button type="submit" class="btn btn-secondary">Подробнее</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <section class="overview">
+                    <div class="overview__container">
+                        <div class="overview__body">
+                            <h2 class="overview__title">Обзор сервиса</h2>
+                            <div class="overview__tabs">
+                                <div class="overview__tabs-btns">
+                                    <button type="button" class="overview__tabs-btn btn btn-grey-outline active">Все данные о контрагенте в один клик</button>
+                                    <button type="button" class="overview__tabs-btn btn btn-grey-outline">Поиск связанных организаций</button>
+                                    <button type="button" class="overview__tabs-btn btn btn-grey-outline">Арбитражные дела</button>
+                                    <button type="button" class="overview__tabs-btn btn btn-grey-outline">Финансовое состояние</button>
+                                </div>
+                                <div class="overview__tabs-content">
+                                    <div class="overview__tabs-block active">
+                                        <img src="@img/overview.jpg" class="cover-image" alt="Фото сервиса">
+                                    </div>
+                                    <div class="overview__tabs-block ">
+                                        Фото Поиск связанных организаций
+                                    </div>
+                                    <div class="overview__tabs-block ">
+                                        Фото Арбитражные дела
+                                    </div>
+                                    <div class="overview__tabs-block ">
+                                        Фото Финансовое состояние
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="tariffs">
+                    <div class="tariffs__container">
+                        <h2 class="tariffs__title">Тарифы</h2>
+                        <div class="tariffs__body">
+                            <div class="tariffs__btns">
+                                <button type="button" class="tariffs__btn btn btn-grey-outline active">Регулярная</button>
+                                <button type="button" class="tariffs__btn btn btn-grey-outline">Периодичная</button>
+                            </div>
+                            <div class="tariffs__content">
+                                <div class="tariffs__content-tab active">
+                                    <div class="tariffs__slider">
+                                        <ul class="swiper-wrapper">
+                                            <li class="tariff swiper-slide">
+                                                <h3 class="tariff__name">Базовый</h3>
+                                                <div class="tariff__desc text-block">Подробные данные о контрагентах</div>
+                                                <div class="tariff__price">
+                                                    <span class="tariff__price-value">
+                                                        29 760 ₽
+                                                    </span>
+                                                    <span class="tariff__price-time">
+                                                        / год
+                                                    </span>
+                                                </div>
+                                                <div class="tariff__old-price">
+                                                    <span class="tariff__old-price-value">32 000 ₽</span>
+                                                    <span class="tariff__old-price-label">Экономия 7%</span>
+                                                </div>
+                                                <div class="tariff__body">
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Возможности:</div>
+                                                        <ul class="tariff__block-list text-block">
+                                                            <li>Безлимит проверок</li>
+                                                            <li>Выписка из ЕГРЮЛ и ЕГРИП</li>
+                                                            <li>Проверка по 30 + источникам</li>
+                                                            <li>Мониторинг до 30 контрагентов</li>
+                                                            <li>Экспресс-отчёт и рекомендации</li>
+                                                            <li>Создание и обмен списками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Дополнительные модули:</div>
+                                                        <ul class="tariff__block-list text-block">
+                                                            <li>
+                                                                <span>Дополнительные пользователи (Считается на этапе оплаты)</span>
+                                                                <span>9 800 ₽</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="tariff__btn btn btn-secondary">Купить</a>
+                                            </li>
+                                            <li class="tariff swiper-slide">
+                                                <h3 class="tariff__name">Премиум</h3>
+                                                <div class="tariff__desc text-block">Подробные данные и аналитика о контрагентах из РФ и СНГ</div>
+                                                <div class="tariff__price">
+                                                    <span class="tariff__price-value">
+                                                        79 050 ₽
+                                                    </span>
+                                                    <span class="tariff__price-time">
+                                                        / год
+                                                    </span>
+                                                </div>
+                                                <div class="tariff__old-price">
+                                                    <span class="tariff__old-price-value">85 000 ₽</span>
+                                                    <span class="tariff__old-price-label">Экономия 7%</span>
+                                                </div>
+                                                <div class="tariff__body">
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Как у Базового и ещё:</div>
+                                                        <ul class="tariff__block-list text-block">
+                                                            <li>Мониторинг до 1000 контрагентов</li>
+                                                            <li>Отчёты об объектах недвижимости</li>
+                                                            <li>Анализ связей и списков</li>
+                                                            <li>Проверка физлиц</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Дополнительные модули:</div>
+                                                        <ul class="tariff__block-list text-block">
+                                                            <li>
+                                                                <span>Дополнительные пользователи (Считается на этапе оплаты)</span>
+                                                                <span>22 000 ₽</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>Скоринг (оценка благонадёжности по вашим требованиям)</span>
+                                                                <span>104 000 ₽</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>Расширенные сведения</span>
+                                                                <span>2 500 ₽</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>Проверка физлиц</span>
+                                                                <span>1 400 ₽</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="tariff__btn btn btn-secondary">Купить</a>
+                                            </li>
+                                            <li class="tariff swiper-slide">
+                                                <h3 class="tariff__name">Премиум +</h3>
+                                                <div class="tariff__desc text-block">Есть всё, а ещё проверка контрагентов из 160 стран и выездные проверки</div>
+                                                <div class="tariff__price">
+                                                    <span class="tariff__price-value">
+                                                        88 350 ₽
+                                                    </span>
+                                                    <span class="tariff__price-time">
+                                                        / год
+                                                    </span>
+                                                </div>
+                                                <div class="tariff__old-price">
+                                                    <span class="tariff__old-price-value">95 000 ₽</span>
+                                                    <span class="tariff__old-price-label">Экономия 7%</span>
+                                                </div>
+                                                <div class="tariff__body">
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Как у Премиума и ещё:</div>
+                                                        <p class="tariff__block-desc text-block">
+                                                            Баланс 12 500 ₽, который можно потратить на расширенные сведения: бизнес-справки о компаниях из стран СНГ и дальнего зарубежья, дополнительные отчёты о физлицах, выездные проверки на адреса
+                                                        </p>
+                                                    </div>
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Дополнительные модули:</div>
+                                                        <ul class="tariff__block-list text-block">
+                                                            <li>
+                                                                <span>Дополнительные пользователи (Считается на этапе оплаты)</span>
+                                                                <span>22 000 ₽</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>Скоринг (оценка благонадёжности по вашим требованиям)</span>
+                                                                <span>104 000 ₽</span>
+                                                            </li>
+                                                            <li>
+                                                                <span>Проверка физлиц</span>
+                                                                <span>1 400 ₽</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="tariff__btn btn btn-secondary">Купить</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tariffs__slider-pagination swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="tariffs__content-tab">
+                                    <div class="tariffs__slider">
+                                        <ul class="swiper-wrapper">
+                                            <li class="tariff swiper-slide">
+                                                <h3 class="tariff__name">Базовый</h3>
+                                                <div class="tariff__desc text-block">Подробные данные о контрагентах с гибкими условиями</div>
+                                                <div class="tariff__price">
+                                                    <span class="tariff__price-value">3 200 ₽</span>
+                                                    <span class="tariff__price-time">/ месяц</span>
+                                                </div>
+                                                <div class="tariff__body">
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Возможности:</div>
+                                                        <ul class="tariff__block-list text-block">
+                                                            <li>До 100 проверок в месяц</li>
+                                                            <li>Выписка из ЕГРЮЛ и ЕГРИП</li>
+                                                            <li>Мониторинг до 10 контрагентов</li>
+                                                            <li>Экспресс-отчёт</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="tariff__btn btn btn-secondary">Купить</a>
+                                            </li>
+                                            <li class="tariff swiper-slide">
+                                                <h3 class="tariff__name">Премиум</h3>
+                                                <div class="tariff__desc text-block">Аналитика и расширенные сведения о контрагентах</div>
+                                                <div class="tariff__price">
+                                                    <span class="tariff__price-value">8 500 ₽</span>
+                                                    <span class="tariff__price-time">/ месяц</span>
+                                                </div>
+                                                <div class="tariff__body">
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Как у Базового и ещё:</div>
+                                                        <ul class="tariff__block-list text-block">
+                                                            <li>До 300 проверок в месяц</li>
+                                                            <li>Мониторинг до 200 контрагентов</li>
+                                                            <li>Проверка физлиц</li>
+                                                            <li>Отчёты об объектах недвижимости</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="tariff__btn btn btn-secondary">Купить</a>
+                                            </li>
+                                            <li class="tariff swiper-slide">
+                                                <h3 class="tariff__name">Премиум +</h3>
+                                                <div class="tariff__desc text-block">Международные проверки и выездные отчёты</div>
+                                                <div class="tariff__price">
+                                                    <span class="tariff__price-value">9 900 ₽</span>
+                                                    <span class="tariff__price-time">/ месяц</span>
+                                                </div>
+                                                <div class="tariff__body">
+                                                    <div class="tariff__block">
+                                                        <div class="tariff__block-caption">Как у Премиума и ещё:</div>
+                                                        <p class="tariff__block-desc text-block">
+                                                            Баланс 2 000 ₽ ежемесячно на дополнительные сведения о компаниях за рубежом и выездные проверки.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="tariff__btn btn btn-secondary">Купить</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tariffs__slider-pagination swiper-pagination"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="extras">
+                    <div class="extras__container">
+                        <h2 class="extras__title">Дополнительные модули</h2>
+                        <p class="extras__subtitle">Покупаются только вместе с <span>основными тарифами</span></p>
+                        <div class="extras__slider swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="extras__item swiper-slide">
+                                    <h3 class="extras__item-title">Проверка физлиц</h3>
+                                    <ul class="extras__item-list text-block">
+                                        <li>10 отчётов в месяц бесплатно на тарифах «Премиум» и «Премиум+»</li>
+                                        <li>Данные в одном отчёте: исполнительные производства, задолженности по налогам нахождение в розыске, банкротство, связи, наличие в реестре дисквалифицированных лиц ФНС и перечне террористов и экстремистов, проверка паспорта на недействительность</li>
+                                    </ul>
+                                    <a href="" class="extras__item-btn btn btn-secondary-outline icon-chevron-right">Подробнее</a>
+                                </li>
+                                <li class="extras__item swiper-slide">
+                                    <h3 class="extras__item-title">Расширенные сведения</h3>
+                                    <ul class="extras__item-list text-block">
+                                        <li>Бизнес-справки и выписки по компаниям из 160 стран: все важные сведения о зарубежном контрагенте в одном документе</li>
+                                        <li>Отчёты о выездной проверке адреса: работает ли компания по заявленному адресу и в каких условиях ведёт деятельность</li>
+                                    </ul>
+                                    <a href="" class="extras__item-btn btn btn-secondary-outline icon-chevron-right">Подробнее</a>
+                                </li>
+                            </ul>
+                            <div class="extras__slider-pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="consult">
+                    <div class="consult__container">
+                        <div class="consult__body consult__body--green">
+                            <div class="consult__main">
+                                <h2 class="consult__title">Не знаете какой тариф выбрать?</h2>
+                                <p class="consult__desc h4">Наши специалисты проконсультируют по тарифным планам и возможностям продукта, порекомендуют только те инструменты, которые:</p>
+                                <ul class="consult__list text-block">
+                                    <li class="consult__list-item icon-check-alternate">Сэкономят вам деньги — подберём оптимальный вариант;</li>
+                                    <li class="consult__list-item icon-check-alternate">Автоматизируют рутину — отчётность, документооборот, учёт;</li>
+                                    <li class="consult__list-item icon-check-alternate">Избавят от проблем — штрафы, ошибки, потеря времени.</li>
+                                </ul>
+                            </div>
+                            @@include('./html/_consult-form.html', {
+                            "btn": "green"
+                            })
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_faq.html', {})
+                @@include('html/_reviews.html', {})
+                <section class="about">
+                    <div class="about__container">
+                        <div class="about__body">
+                            <div class="about__offer">
+                                <h2 class="about__title">
+                                    ООО «ЦИТ Хай-Тёк»
+                                </h2>
+                                <p class="about__desc h4">Является официальным партнёром компании СКБ Контур.</p>
+                                <div class="about__text text-block">
+                                    <p>Мы предлагаем продукты Контура в Норильске. Поможем выбрать программу, исходя из ваших потребностей. Выгодно и быстро подключим веб-сервисы Контур.Экстерн, Контур.Фокус и другие. Выпустим сертификат электронной подписи и научим работать в сервисах.</p>
+                                    <p>Выбирайте надёжные и удобные решения для бизнеса от СКБ Контур вместе с нами!</p>
+                                </div>
+                                <a href="" class="about__btn btn btn-secondary icon-chevron-right">Подробнее</a>
+                            </div>
+                            <div class="about__image">
+                                <img src="@img/promo/about.jpg" class="cover-image" alt="Компания">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_news.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

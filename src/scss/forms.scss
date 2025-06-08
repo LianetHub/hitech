@@ -43,6 +43,18 @@
 		display: inline-block;
 		width: fit-content;
 		max-width: rem(380);
+		&--green {
+			--checkbox-color: #3cbc5d;
+		}
+		&--tiffany {
+			--checkbox-color: #00ccae;
+		}
+		&--blue {
+			--checkbox-color: #2290ff;
+		}
+		&--orange {
+			--checkbox-color: #ff8227;
+		}
 	}
 	// .form__checkbox-input
 	&__checkbox-input {
@@ -86,7 +98,7 @@
 			width: 2.125rem;
 			height: 2.125rem;
 			border-radius: 0.625rem;
-			color: var(--promo-accent, #{$red});
+			color: var(--checkbox-color, #{$red});
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -239,6 +251,29 @@
 		&:hover {
 			background-color: #13aa3a;
 			border-color: #13aa3a;
+		}
+		&:active {
+			background-color: $darkGreen;
+			border-color: $darkGreen;
+		}
+		&:disabled,
+		&[aria-disabled="true"] {
+			cursor: default;
+			pointer-events: none;
+			background-color: #dadada;
+			border-color: #dadada;
+		}
+	}
+
+	&.btn-secondary-outline {
+		background: $white;
+		color: $green;
+		border-color: $green;
+
+		&:hover {
+			background: $green;
+			color: $white;
+			border-color: $green;
 		}
 		&:active {
 			background-color: $darkGreen;

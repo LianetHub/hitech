@@ -7,6 +7,14 @@
             <input type="checkbox" name="privacy" checked class="form__checkbox-input hidden" hidden>
             <span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
         </label>
+        @@if(typeof btn !== 'undefined') {
+        @@if(btn === 'green') {
+        <button type="submit" class="form__btn btn btn-secondary">Подобрать</button>
+        }
+        }
+        @@if(typeof btn == 'undefined') {
+
         <button type="submit" class="form__btn btn btn-primary">Подобрать</button>
+        }
     </div>
 </form>

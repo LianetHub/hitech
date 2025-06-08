@@ -147,26 +147,54 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (target.classList.contains('product-card__tabs-btn')) {
-            const tabsContainer = target.closest('.product-card__tabs');
-            const allTabs = tabsContainer.querySelectorAll('.product-card__tabs-btn');
-            const contentContainer = tabsContainer.nextElementSibling;
-            const allContents = contentContainer.querySelectorAll('.product-card__tab-content');
+            handleTabs(target, {
+                btnClass: 'product-card__tabs-btn',
+                containerClass: 'product-card__body',
+                contentWrapperClass: 'product-card__content',
+                contentItemClass: 'product-card__tab-content'
+            });
+        }
 
-            const index = Array.from(allTabs).indexOf(target);
+        if (target.classList.contains('overview__tabs-btn')) {
+            handleTabs(target, {
+                btnClass: 'overview__tabs-btn',
+                containerClass: 'overview__tabs',
+                contentWrapperClass: 'overview__tabs-content',
+                contentItemClass: 'overview__tabs-block'
+            });
+        }
 
+        if (target.classList.contains('tariffs__btn')) {
 
-            allTabs.forEach(tab => tab.classList.remove('active'));
-            allContents.forEach(content => content.classList.remove('active'));
-
-
-            target.classList.add('active');
-            if (allContents[index]) {
-                allContents[index].classList.add('active');
-            }
+            handleTabs(target, {
+                btnClass: 'tariffs__btn',
+                containerClass: 'tariffs__body',
+                contentWrapperClass: 'tariffs__content',
+                contentItemClass: 'tariffs__content-tab'
+            });
         }
 
 
     });
+
+    function handleTabs(target, { btnClass, containerClass, contentWrapperClass, contentItemClass }) {
+        if (!target.classList.contains(btnClass)) return;
+
+        const tabsContainer = target.closest(`.${containerClass}`);
+        const allTabs = tabsContainer.querySelectorAll(`.${btnClass}`);
+        const contentContainer = tabsContainer.querySelector(`.${contentWrapperClass}`);
+        const allContents = contentContainer.querySelectorAll(`.${contentItemClass}`);
+
+        const index = Array.from(allTabs).indexOf(target);
+
+        allTabs.forEach(tab => tab.classList.remove('active'));
+        allContents.forEach(content => content.classList.remove('active'));
+
+        target.classList.add('active');
+        if (allContents[index]) {
+            allContents[index].classList.add('active');
+        }
+    }
 
 
     function getMenu() {
@@ -367,6 +395,68 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 },
             })
+        })
+
+    }
+
+
+    if (document.querySelector('.focus__slider')) {
+        getMobileSlider('.focus__slider', {
+            autoHeight: true,
+            pagination: {
+                el: ".focus__pagination",
+                clickable: true,
+            },
+        })
+    }
+
+    if (document.querySelectorAll('.tariffs__slider').length > 0) {
+        document.querySelectorAll('.tariffs__slider').forEach(function (slider) {
+
+            const pagination = slider.querySelector('.tariffs__slider-pagination');
+
+            new Swiper(slider, {
+                slidesPerView: "auto",
+                spaceBetween: 30,
+                watchOverflow: true,
+                autoHeight: true,
+                pagination: {
+                    el: pagination,
+                    clickable: true,
+                },
+                breakpoints: {
+                    991.98: {
+                        slidesPerView: 2,
+                        autoHeight: false,
+                    },
+                    1699.98: {
+                        slidesPerView: 3,
+                        autoHeight: false,
+                    }
+                },
+            })
+        })
+
+    }
+
+    if (document.querySelector('.extras__slider')) {
+
+        new Swiper('.extras__slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            watchOverflow: true,
+
+            pagination: {
+                el: '.extras__slider-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                991.98: {
+                    slidesPerView: 2,
+
+                },
+
+            },
         })
 
     }
