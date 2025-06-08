@@ -6,7 +6,8 @@
 	& + * {
 		padding-top: 1.25rem !important;
 		&.contacts,
-		&.article {
+		&.article,
+		&.product-card {
 			padding-top: 0 !important;
 		}
 	}

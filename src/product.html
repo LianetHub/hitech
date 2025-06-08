@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Онлайн кассы'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 0
+            })
+            <main class="page">
+                <nav aria-label="Постраничная навигация" class="breadcrumbs">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link">Главная страница</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="/сatalog.html" class="breadcrumbs__link">Онлайн кассы</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link">Смарт-терминалы</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link active">MSPOS‑K</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="product-card">
+                    <div class="product-card__container">
+                        <div class="product-card__header">
+                            <div class="product-card__main">
+                                <a href="@img/products/MSPOS‑K.png" data-fancybox class="product-card__image">
+                                    <img src="@img/products/MSPOS‑K.png" alt="Фото товара">
+                                </a>
+                                <div class="product-card__info">
+                                    <h1 class="product-card__title">MSPOS‑K</h1>
+                                    <p class="product-card__desc text-block">Поддерживает работу с фискальными накопителями на 13 и 36 месяцев, а также формат фискальных данных 1.05.</p>
+                                    <div class="product-card__caption">Оптимальное решение для малоформатной розницы. Касса подходит:</div>
+                                    <ul class="product-card__list text-block">
+                                        <li class="product-card__list-item icon-check-alternate">Курьерам интернет-магазинов, которые рассчитывают покупателя за пределами офиса</li>
+                                        <li class="product-card__list-item icon-check-alternate">Магазинам одежды и обуви, сувенирным и книжным лавкам, пекарням, кондитерским, небольшим кафе, «островкам» в торговых центрах.</li>
+                                    </ul>
+                                    <div class="product-card__price">
+                                        Цена от:
+                                        <span class="product-card__price-value h3">18 200 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="#" class="product-card__form">
+                                <div class="product-card__form-title h3">
+                                    Оставить заявку на расчёт стоимости и приобретение
+                                </div>
+                                <p class="product-card__form-subtitle">Пожалуйста, сообщите вашу контактную информацию, менеджеры свяжутся с вами и оформят заказ.</p>
+                                <div class="product-card__form-fields">
+                                    <input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+                                    <input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="privacy" checked class="form__checkbox-input hidden" hidden>
+                                        <span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+                                    </label>
+                                    <button type="submit" class="form__btn btn btn-primary">Оставить заявку</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="product-card__body">
+                            <div class="product-card__tabs">
+                                <button type="button" class="product-card__tabs-btn btn btn-grey-outline active">Характеристики</button>
+                                <button type="button" class="product-card__tabs-btn btn btn-grey-outline">Печатающее устройство</button>
+                                <button type="button" class="product-card__tabs-btn btn btn-grey-outline">Системная плата (POS-контроллер)</button>
+                            </div>
+                            <div class="product-card__content">
+                                <div class="product-card__tab-content active">
+                                    <h4 class="product-card__content-title">Характеристики</h4>
+                                    <ul class="product-card__props">
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Габариты:</div>
+                                            <div class="product-card__props-value">8 × 1 × 4 мм</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Вес:</div>
+                                            <div class="product-card__props-value">0,5 кг</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Тип дисплея:</div>
+                                            <div class="product-card__props-value">цветная сенсорная панель IPS LED, размер экрана 5,5“, разрешение 128 × 20 px</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Интерфейсы подключения:</div>
+                                            <div class="product-card__props-value">USB (Type-C), 1 SIM card</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Беспроводная связь:</div>
+                                            <div class="product-card__props-value">Сотовая 3G, локальная Buil-in Wi-Fi 802.11 b/g/n, Bluetooth 3.0/4.0</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Камера:</div>
+                                            <div class="product-card__props-value">5.0М АF выполняет функцию сканера линейных штрихкодов</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Время считывания QR-кодов:</div>
+                                            <div class="product-card__props-value">0,7 сек</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Электропитание:</div>
+                                            <div class="product-card__props-value">аккумулятор 3,7V/5200 mAh. Время автономной работы от аккумулятора: до 48 часов непрерывной работы (5000 чеков), до 30 дней в отключённом состоянии</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-card__tab-content">
+                                    <h4 class="product-card__content-title">Печатающее устройство</h4>
+                                    <ul class="product-card__props">
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Тип:</div>
+                                            <div class="product-card__props-value">Термопринтер</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Скорость печати:</div>
+                                            <div class="product-card__props-value">70 мм/сек</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Ширина ленты:</div>
+                                            <div class="product-card__props-value">58 мм</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Ресурс печатающей головки:</div>
+                                            <div class="product-card__props-value">50 км</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Автоотрезчик:</div>
+                                            <div class="product-card__props-value">Нет</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-card__tab-content">
+                                    <h4 class="product-card__content-title">Системная плата (POS-контроллер)</h4>
+                                    <ul class="product-card__props">
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Процессор:</div>
+                                            <div class="product-card__props-value">Quad-core ARM Cortex-A53, 1.3 ГГц</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Оперативная память (RAM):</div>
+                                            <div class="product-card__props-value">1 ГБ</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Память (ROM):</div>
+                                            <div class="product-card__props-value">8 ГБ</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Операционная система:</div>
+                                            <div class="product-card__props-value">Android 7.0</div>
+                                        </li>
+                                        <li class="product-card__props-item">
+                                            <div class="product-card__props-name">Дополнительно:</div>
+                                            <div class="product-card__props-value">Поддержка обновлений по OTA, интеграция с 1С</div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="consult">
+                    <div class="consult__container">
+                        <div class="consult__body">
+                            <div class="consult__main">
+                                <h2 class="consult__title">Не знаете какой тариф выбрать?</h2>
+                                <p class="consult__desc h4">Наши специалисты проконсультируют по тарифным планам и возможностям продукта, порекомендуют только те инструменты, которые:</p>
+                                <ul class="consult__list text-block">
+                                    <li class="consult__list-item icon-check-alternate">Сэкономят вам деньги — подберём оптимальный вариант;</li>
+                                    <li class="consult__list-item icon-check-alternate">Автоматизируют рутину — отчётность, документооборот, учёт;</li>
+                                    <li class="consult__list-item icon-check-alternate">Избавят от проблем — штрафы, ошибки, потеря времени.</li>
+                                </ul>
+                            </div>
+                            @@include('./html/_consult-form.html')
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

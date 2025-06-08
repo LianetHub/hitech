@@ -122,13 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const target = e.target;
 
-        if (target.classList.contains('search__btn')) {
-            if (document.querySelector('.search').classList.contains('active')) {
-                hideSearch()
-            } else {
-                getSearch()
-            }
-        }
 
         if (target.closest('.icon-menu') || target.classList.contains('menu__close')) {
             getMenu()
@@ -153,40 +146,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-        if (target.matches('.article__full')) {
-            target.classList.toggle('active');
-            target.parentNode.classList.toggle('active');
-            if (target.classList.contains('active')) {
-                target.textContent = 'Скрыть';
-            } else {
-                target.textContent = 'Развернуть';
+        if (target.classList.contains('product-card__tabs-btn')) {
+            const tabsContainer = target.closest('.product-card__tabs');
+            const allTabs = tabsContainer.querySelectorAll('.product-card__tabs-btn');
+            const contentContainer = tabsContainer.nextElementSibling;
+            const allContents = contentContainer.querySelectorAll('.product-card__tab-content');
+
+            const index = Array.from(allTabs).indexOf(target);
+
+
+            allTabs.forEach(tab => tab.classList.remove('active'));
+            allContents.forEach(content => content.classList.remove('active'));
+
+
+            target.classList.add('active');
+            if (allContents[index]) {
+                allContents[index].classList.add('active');
             }
         }
+
+
     });
 
-
-    document.addEventListener('keydown', (e) => {
-
-        if (e.key === "Escape") {
-            if (document.querySelector('.search').classList.contains('active')) {
-                hideSearch()
-            }
-        }
-    });
-
-    document.querySelector('.search__form-input')?.addEventListener('blur', hideSearch)
-
-
-    function getSearch() {
-        document.querySelector('.search').classList.add('active');
-        setTimeout(() => {
-            document.querySelector('.search__form-input').focus();
-        }, 500)
-    }
-
-    function hideSearch() {
-        document.querySelector('.search').classList.remove('active');
-    }
 
     function getMenu() {
         document.querySelector('.header').classList.toggle('open-menu');
