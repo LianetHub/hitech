@@ -1,7 +1,7 @@
 .footer {
 	background: $text;
 	color: $white;
-	padding: 3.75rem 0;
+	padding: 3.75rem 0 rem(50);
 	// .footer__container
 	&__container {
 	}
@@ -9,7 +9,7 @@
 	&__header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 	}
 	// .footer__logo
 	&__logo {
@@ -19,6 +19,7 @@
 		display: flex;
 		align-items: center;
 		gap: 2.5rem;
+		padding-right: rem(23);
 	}
 	// .footer__socials
 	&__socials {
@@ -67,10 +68,16 @@
 	}
 	// .footer__menu
 	&__menu {
+		max-width: 70rem;
+		width: 100%;
 		& ul {
+			width: 100%;
 			display: grid;
-			grid-template-columns: repeat(6, 1fr);
+			justify-content: space-between;
+			grid-template-columns: repeat(6, auto);
+
 			gap: 1.25rem;
+			column-gap: rem(60);
 			& a {
 				transition: color 0.3s ease;
 				@media (any-hover: hover) {

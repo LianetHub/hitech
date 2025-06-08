@@ -9,11 +9,11 @@
     },
     {
         "image": "@img/products/consumables.png",
-        "name": "Расходные материалы"
+        "name": "Расходные <br> материалы"
     },
     {
         "image": "@img/products/label-printers.png",
-        "name": "Принтеры этикеток и чеков"
+        "name": "Принтеры этикеток и&nbsp;чеков"
     },
     {
         "image": "@img/products/acquiring-terminals.png",
@@ -21,7 +21,7 @@
     },
     {
         "image": "@img/products/electronic-scales.png",
-        "name": "Электронные весы"
+        "name": "Электронные <br> весы"
     },
     {
         "image": "@img/products/pos-terminals.png",

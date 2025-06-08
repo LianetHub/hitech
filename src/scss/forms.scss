@@ -6,6 +6,7 @@
 		width: 100%;
 		color: $text;
 		border-radius: 1.875rem;
+		font-size: 1rem;
 		padding: 1.25rem;
 		border: rem(1.5) solid #f6f6f6;
 		background: #fff;
@@ -31,11 +32,8 @@
 			background: #fff1ed;
 		}
 		&:is(textarea) {
-			height: rem(119);
+			height: rem(100);
 			resize: none;
-			@media (min-width: $md3) {
-				text-align: left;
-			}
 		}
 	}
 
@@ -106,7 +104,12 @@
 	&__bottom {
 		display: flex;
 		align-content: center;
-		gap: 1.25rem;
+		flex-direction: column;
+		gap: 1rem;
+		@media (min-width: $md4) {
+			gap: 1.25rem;
+			flex-direction: row;
+		}
 	}
 	// .form__btn
 	&__btn {

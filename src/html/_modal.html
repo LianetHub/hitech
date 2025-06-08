@@ -1,30 +1,36 @@
 <div id="callback" class="popup">
     <button type="button" data-fancybox-close class="popup__close icon-close"></button>
-    <h2 class="popup__title title">Запиcаться на прием</h2>
+    <h2 class="popup__title">Отправить заявку</h2>
+    <p class="popup__subtitle">Заполните форму и мы свяжемся с вами для уточнения деталей и оформления.</p>
     <form action="#" class="popup__form form">
-        <div class="form__field">
-            <label for="callback-name">Ваше имя</label>
-            <input type="text" name="name" id="callback-name" class="form__control" placeholder="Введите имя">
-        </div>
-        <div class="form__field">
-            <label for="callback-phone">Телефон</label>
-            <input type="tel" name="phone" id="callback-phone" class="form__control" placeholder="+7 ___ ___-__-__">
-        </div>
-        <div class="form__field">
-            <label for="callback-message">Вопрос</label>
-            <textarea name="message" id="callback-message" class="form__control" placeholder="Опишите Ваш вопрос"></textarea>
-        </div>
-        <label class="form__checkbox">
-            <input type="checkbox" name="not-call" class="form__checkbox-input hidden" hidden>
-            <span class="form__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку <a href="">персональных данных</a></span>
-        </label>
-        <div class="form__footer">
-            <button type="submit" class="form__btn btn btn-primary btn-lg icon-phone">Отправить заявку</button>
-            <div class="form__socials">
-                <a href="" class="form__social icon-whatsapp"></a>
-                <a href="" class="form__social icon-telegram"></a>
-            </div>
+        <input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+        <input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+        <select name="product" class="select" data-placeholder="Выберите продукт">
+            <option value="Смарт-терминалы">Смарт-терминалы</option>
+            <option value="Фискальные накопители и ОФД">Фискальные накопители и ОФД</option>
+            <option value="Автономные кассы">Автономные кассы</option>
+            <option value="Фискальные регистраторы">Фискальные регистраторы</option>
+            <option value="Аксессуары для касс">Аксессуары для касс</option>
+            <option value="Сканеры штрих-кода">Сканеры штрих-кода</option>
+            <option value="POS-периферия">POS-периферия</option>
+            <option value="Расходные материалы">Расходные материалы</option>
+            <option value="Принтеры этикеток и чеков">Принтеры этикеток и чеков</option>
+            <option value="Терминалы эквайринга">Терминалы эквайринга</option>
+            <option value="Электронные весы">Электронные весы</option>
+            <option value="POS-терминалы">POS-терминалы</option>
+        </select>
+        <textarea name="message" class="form__control" placeholder="Комментарии к заказу"></textarea>
+        <div class="form__bottom">
+            <label class="form__checkbox">
+                <input type="checkbox" name="privacy" checked class="form__checkbox-input hidden" hidden>
+                <span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+            </label>
+            <button type="submit" class="form__btn btn btn-primary">Заказать</button>
         </div>
     </form>
-
+</div>
+<div id="success" class="popup popup--sm">
+    <button type="button" data-fancybox-close class="popup__close icon-close"></button>
+    <h3 class="popup__title">Спасибо, ваша заявка принята!</h3>
+    <button type="button" data-fancybox-close class="popup__btn btn btn-primary">Закрыть</button>
 </div>

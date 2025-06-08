@@ -9,7 +9,7 @@
     },
     {
         "image": "@img/products/autonomous-cash-registers.png",
-        "name": "Автономные кассы"
+        "name": "Автономные <br> кассы"
     },
     {
         "image": "@img/products/fiscal-registrars.png",
@@ -17,6 +17,6 @@
     },
     {
         "image": "@img/products/accessories-for-cash-registers.png",
-        "name": "Аксессуары для касс"
+        "name": "Аксессуары <br> для касс"
     }
 ]

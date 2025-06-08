@@ -30,13 +30,31 @@
 	position: relative;
 	display: none;
 	width: 100%;
-	max-width: rem(670);
+	max-width: rem(700);
 	background: #fff;
 	color: $text;
-	border-radius: rem(12);
-	padding: rem(30) rem(10);
-	@media (min-width: $md4) {
-		padding: rem(30) rem(40);
+	border-radius: rem(20);
+	padding: rem(30) rem(26);
+	@media (min-width: $md5) {
+		padding: rem(50) rem(100);
+	}
+	&--sm {
+		max-width: 22.6875rem;
+		padding: 2.5rem 3.56rem;
+		@media (min-width: $md4) {
+			padding: 3.125rem;
+		}
+		.popup__close {
+			right: 1.5rem;
+			top: 1.5rem;
+		}
+		.popup__title {
+			padding: 0;
+		}
+	}
+	// .popup__btn
+	&__btn {
+		margin-top: rem(30);
 	}
 	// .popup__body
 	&__body {
@@ -44,17 +62,25 @@
 	// .popup__close
 	&__close {
 		position: absolute;
-		top: 0.63rem;
-		right: 0.63rem;
-		font-size: 2rem;
+
+		flex-shrink: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		transition: color 0.3s ease 0s;
-		color: $text;
+		color: $red;
+		top: 1.5rem;
+		right: 1.5rem;
+		width: 1.875rem;
+		height: 1.875rem;
+		font-size: 1.8875rem;
+		@media (min-width: $md4) {
+			top: 2.5rem;
+			right: 2.5rem;
+		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: $text;
 			}
 		}
 	}
@@ -62,19 +88,32 @@
 	// .popup__title
 	&__title {
 		text-align: center;
+		padding: 0 2rem;
 	}
 	// .popup__subtitle
 	&__subtitle {
-		margin-top: 1.5rem;
+		margin-top: 1rem;
+		color: #686868;
 		text-align: center;
-		font-size: 1.25rem;
 		font-weight: 500;
+		line-height: 115%;
+		max-width: 25.8125rem;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.0625rem;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+		}
 	}
 	// .popup__form
 	&__form {
-		margin-top: 2rem;
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1rem;
+		margin-top: 1.5rem;
+		@media (min-width: $md4) {
+			margin-top: 1.88rem;
+			gap: 1.25rem;
+		}
 	}
 }

@@ -281,6 +281,10 @@
 		&--center {
 			margin-top: 0;
 			margin-left: 0;
+			margin-bottom: 1rem;
+			& ~ .product__btn {
+				margin-top: 3rem;
+			}
 			&::before {
 				top: 0;
 				left: 0;
@@ -318,10 +322,13 @@
 		margin-top: rem(40);
 		display: flex;
 		align-items: center;
-		gap: 5.19rem;
+		display: grid;
+		grid-template-columns: 4fr 1fr;
 	}
 	// .support__slider
 	&__slider {
+		min-width: 0;
+		max-width: 100%;
 	}
 	// .support__item
 	&__item {
@@ -354,7 +361,7 @@
 	}
 	// .support__btn
 	&__btn {
-		flex-shrink: 0;
+		margin: 0 auto;
 	}
 }
 
@@ -370,6 +377,7 @@
 		color: #fff;
 		padding: 5rem 5.37rem 5rem 2.5rem;
 		display: flex;
+		align-items: center;
 	}
 	// .consult__main
 	&__main {
@@ -414,7 +422,7 @@
 		flex: 0 0 35rem;
 		display: flex;
 		flex-direction: column;
-		gap: rem(30);
+		gap: rem(20);
 	}
 	// .consult__form-title
 	&__form-title {
@@ -462,7 +470,7 @@
 	// .reviews__dialog
 	&__dialog {
 		border-radius: 1.25rem;
-		max-width: 85%;
+		max-width: 83%;
 		font-size: 1.0625rem;
 		line-height: 124%;
 		padding: 0.9375rem;
@@ -470,14 +478,14 @@
 		background: #fff;
 		color: #858585;
 		&:not(:last-child) {
-			margin-bottom: 0.56rem;
+			margin-bottom: rem(9);
 		}
 		&--input {
 			background: #82b8ff;
 			color: #222;
 			margin-left: auto;
 			&:not(:last-child) {
-				margin-bottom: 1.87rem;
+				margin-bottom: rem(30);
 			}
 		}
 	}
@@ -518,6 +526,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 4.38rem;
+		padding-right: 5.5rem;
 	}
 	// .about__numbers-item
 	&__numbers-item {
@@ -528,11 +537,10 @@
 	// .about__numbers-caption
 	&__numbers-caption {
 		font-size: 6.25rem;
-		line-height: 120%;
+		line-height: 100%;
 	}
 	// .about__numbers-desc
 	&__numbers-desc {
-		margin-top: 1.5rem;
 		font-size: 1.1875rem;
 		line-height: 124%;
 		max-width: 16.5rem;
@@ -627,7 +635,7 @@
 	}
 	// .news__link
 	&__link {
-		margin-top: 2.12rem;
+		margin-top: 1.5rem;
 		color: #fe4c4c;
 		font-size: 1rem;
 		font-weight: 500;
