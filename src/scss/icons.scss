@@ -17,7 +17,9 @@
 		display: block;
 	}
 }
-
+.icon-phone:before {
+	content: "\e90d";
+}
 .icon-close:before {
 	content: "\e90c";
 }

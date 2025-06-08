@@ -256,32 +256,114 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (document.querySelector('.support__slider')) {
         new Swiper('.support__slider', {
-            slidesPerView: 4,
-            spaceBetween: 30
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            breakpoints: {
+                1279.98: {
+                    slidesPerView: 4,
+                },
+            }
         })
     }
 
     if (document.querySelector('.reviews__slider')) {
         new Swiper('.reviews__slider', {
-            slidesPerView: 4,
             spaceBetween: 30,
             navigation: {
                 nextEl: ".reviews__next",
                 prevEl: ".reviews__prev"
+            },
+            pagination: {
+                el: ".reviews__pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                575.98: {
+                    slidesPerView: 2,
+                },
+                991.98: {
+                    slidesPerView: 3,
+                },
+                1439.98: {
+                    slidesPerView: 4,
+                },
             }
         })
     }
 
     if (document.querySelector('.news__slider')) {
         new Swiper('.news__slider', {
-            slidesPerView: 4,
+
             spaceBetween: 30,
             navigation: {
                 nextEl: ".news__next",
                 prevEl: ".news__prev"
+            },
+            pagination: {
+                el: ".news__pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                575.98: {
+                    slidesPerView: 2,
+                },
+                991.98: {
+                    slidesPerView: 3,
+                },
+                1439.98: {
+                    slidesPerView: 4,
+                },
             }
         })
     }
+
+    if (document.querySelector('.services__slider')) {
+        getMobileSlider('.services__slider', {
+            autoHeight: true,
+            pagination: {
+                el: ".services__pagination",
+                clickable: true,
+            },
+        })
+    }
+
+    if (document.querySelectorAll('.products__slider').length > 0) {
+        document.querySelectorAll('.products__slider').forEach(function (slider) {
+            getMobileSlider(slider, {
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                pagination: {
+                    el: slider.querySelector(".products__pagination"),
+                    clickable: true,
+                },
+            })
+        })
+
+    }
+
+
+    function getMobileSlider(sliderName, options) {
+
+        let init = false;
+        let swiper = null;
+
+        function getSwiper() {
+            if (window.innerWidth <= 767.98) {
+                if (!init) {
+                    init = true;
+                    swiper = new Swiper(sliderName, options);
+                }
+            } else if (init) {
+                swiper.destroy();
+                swiper = null;
+                init = false;
+            }
+        }
+        getSwiper();
+        window.addEventListener("resize", getSwiper);
+    }
+
+
 
 
     // init spollers
@@ -424,13 +506,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    Fancybox.show([{
-        src: "#success",
-        dragToClose: false,
-        closeButton: false
-    }])
-
-
+    // custom select
 
     class CustomSelect {
 
