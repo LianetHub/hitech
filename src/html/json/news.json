@@ -1,0 +1,98 @@
+[
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/01.jpg",
+        "date": "2025-05-12",
+        "displayDate": "12.05.2025",
+        "caption": "Новые POS-терминалы с ИИ: как они ускоряют работу кассиров"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/02.jpg",
+        "date": "2025-04-28",
+        "displayDate": "28.04.2025",
+        "caption": "С 1 мая крупные торговые сети должны соблюдать режим офлайн-проверки"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/03.jpg",
+        "date": "2025-04-12",
+        "displayDate": "12.04.2025",
+        "caption": "1С или облачная CRM? Сравниваем решения для автоматизации розницы"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/04.jpg",
+        "date": "2025-04-01",
+        "displayDate": "01.04.2025",
+        "caption": "Фискальные накопители 2025: что изменилось в законодательстве"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/05.jpg",
+        "date": "2025-04-01",
+        "displayDate": "01.04.2025",
+        "caption": "Смарт-терминалы 2024: ТОП-5 моделей для малого бизнеса"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/06.jpg",
+        "date": "2025-04-01",
+        "displayDate": "01.04.2025",
+        "caption": "Как выбрать смарт-терминал? Критерии и лайфхаки"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/07.jpg",
+        "date": "2025-04-01",
+        "displayDate": "01.04.2025",
+        "caption": "NFC, QR и Face Pay: Какие технологии оплаты выгоднее для кафе?"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/08.jpg",
+        "date": "2025-04-28",
+        "displayDate": "28.04.2025",
+        "caption": "С 1 мая крупные торговые сети должны соблюдать режим офлайн-проверки"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/09.jpg",
+        "date": "2025-04-01",
+        "displayDate": "01.04.2025",
+        "caption": "Облачные терминалы vs классические: Плюсы и минусы"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/10.jpg",
+        "date": "2025-04-01",
+        "displayDate": "01.04.2025",
+        "caption": "Безопасность платежей: Как защитить данные клиентов в 2024 году"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/11.jpg",
+        "date": "2025-04-01",
+        "displayDate": "01.04.2025",
+        "caption": "Фискальные накопители 2025: что изменилось в законодательстве"
+    },
+    {
+        "className": " swiper-slide",
+        "label": "Новости отрасли",
+        "image": "@img/news/12.jpg",
+        "date": "2025-04-01",
+        "displayDate": "01.04.2025",
+        "caption": "Мобильные терминалы для курьеров: Обзор лучших решений"
+    }
+]
