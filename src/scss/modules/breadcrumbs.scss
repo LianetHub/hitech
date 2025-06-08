@@ -1,5 +1,8 @@
 .breadcrumbs {
 	padding: 2.25rem 0 1.25rem;
+	& + * {
+		padding-top: 1.25rem !important;
+	}
 	// .breadcrumbs__list
 	&__list {
 		display: flex;

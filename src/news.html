@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Новости и полезные материалы'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 2
+            })
+            <main class="page">
+                <nav aria-label="Постраничная навигация" class="breadcrumbs">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link">Главная страница</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link active">Новости и полезные материалы</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="news">
+                    <div class="news__container">
+                        <h1 class="news__title">Новости и полезные материалы</h1>
+                        <ul class="news__list">
+                            @@loop('html/templates/_news-item.html', './html/json/news.json')
+                        </ul>
+                        <a href="" class="news__more btn btn-dark-outline">Загрузить ещё статьи</a>
+                    </div>
+                </section>
+
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>
