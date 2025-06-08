@@ -36,6 +36,41 @@
 		@media (min-width: $md0) {
 			padding: 4.88rem 2.5rem;
 		}
+		&:first-child:last-child {
+			flex: 1 1 auto;
+		}
+		&--light {
+			background: #f4f7fb;
+			color: #222;
+			padding: 1.88rem 1.25rem;
+			@media (min-width: $md5) {
+				padding: 2.5rem;
+			}
+			.promo__benefit {
+				border: rem(1) solid #dadada;
+				&::before {
+					color: $red;
+				}
+			}
+		}
+	}
+	// .promo__caption
+	&__caption {
+		margin-top: 1.25rem;
+		@media (min-width: $md3) {
+			margin-top: 2.5rem;
+		}
+	}
+	// .promo__subtitle
+	&__subtitle {
+		font-weight: 700;
+		line-height: 120%;
+		font-size: 1.1875rem;
+		margin-top: 0.75rem;
+		@media (min-width: $md3) {
+			margin-top: 1.25rem;
+			font-size: 1.25rem;
+		}
 	}
 	// .promo__title
 	&__title {
@@ -53,6 +88,7 @@
 		margin-top: 1.5rem;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+
 		@media (min-width: $md5) {
 			display: flex;
 			flex-wrap: wrap;
@@ -61,11 +97,31 @@
 			margin-top: 2.5rem;
 			gap: 1.25rem;
 		}
+		&--grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			@media (min-width: $md2) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			.promo__benefit {
+				border-radius: 0.625rem;
+				gap: 1rem;
+				font-weight: 400;
+				padding: 0.9375rem;
+				font-size: 1.0625rem;
+				@media (min-width: $md2) {
+					font-size: 1.1875rem;
+				}
+				&::before {
+					font-size: 1.75rem;
+				}
+			}
+		}
 	}
 	// .promo__benefit
 	&__benefit {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		gap: 0.5rem;
 		border-radius: 1.875rem;
 		border: rem(1) solid;
@@ -132,6 +188,9 @@
 		}
 		@media (min-width: $md4) {
 			min-height: 44.4375rem;
+			&--small {
+				min-height: rem(581);
+			}
 		}
 	}
 	// .promo__list
@@ -146,6 +205,9 @@
 			position: absolute;
 			inset: 0;
 			z-index: 2;
+			&--start {
+				align-items: flex-start;
+			}
 		}
 	}
 	// .promo__item
@@ -679,6 +741,12 @@
 
 .reviews {
 	padding: rem(30) 0 rem(30);
+	&:last-child {
+		padding-bottom: rem(60);
+		@media (min-width: $md2) {
+			padding-bottom: rem(100);
+		}
+	}
 	@media (min-width: $md4) {
 		padding: rem(60) 0 rem(30);
 	}
