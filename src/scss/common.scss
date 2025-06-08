@@ -395,6 +395,32 @@ body {
 	// .products__title
 	&__title {
 	}
+	// .products__btns
+	&__btns {
+		margin-top: rem(30);
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(20);
+	}
+	// .products__btn
+	&__btn {
+		min-width: rem(220);
+		&.active {
+			background: $red;
+			color: $white;
+			border-color: $red;
+			&:hover {
+				background-color: #fe3434;
+				border-color: #fe3434;
+				color: $white;
+			}
+			&:active {
+				background-color: $violet;
+				border-color: $violet;
+				color: $white;
+			}
+		}
+	}
 	// .products__slider
 	&__slider {
 		margin-top: 2rem;
@@ -414,6 +440,14 @@ body {
 		.products__pagination {
 			@media (min-width: $md4) {
 				display: none;
+			}
+		}
+		&--large {
+			grid-template-columns: repeat(2, 1fr);
+			.product__desc {
+				margin-top: rem(20);
+				color: #222;
+				margin-bottom: auto;
 			}
 		}
 	}
@@ -462,7 +496,7 @@ body {
 			}
 		}
 	}
-	&.product--large {
+	&--large {
 		&.swiper-slide {
 		}
 		&.swiper-slide-active {
@@ -489,6 +523,33 @@ body {
 		@media (any-hover: hover) {
 			&:hover {
 				background: #fff;
+			}
+		}
+	}
+	&--row {
+		@media (min-width: $md2) {
+			flex-direction: row;
+		}
+		.product__image {
+			width: 100%;
+			height: auto;
+			margin-right: rem(24);
+			margin-top: 0;
+			margin-left: 0;
+			margin-bottom: rem(20);
+			@media (min-width: $md2) {
+				margin-bottom: 0;
+				flex: 0 0 rem(201);
+			}
+
+			&::before {
+				width: 100%;
+				height: 100%;
+				background: #f4f7fb;
+
+				border-radius: rem(10);
+				top: 0;
+				left: 0;
 			}
 		}
 	}
@@ -541,11 +602,21 @@ body {
 			}
 		}
 	}
+	// .product__subtitle
+	&__subtitle {
+		margin-top: 0.75em;
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 120%;
+	}
 	// .product__desc
 	&__desc {
 		margin-top: 0.75rem;
 		color: #858585;
 		flex: 1 1 auto;
+		& + .product__list {
+			margin-top: 0.75rem;
+		}
 	}
 	// .product__footer
 	&__footer {
@@ -577,7 +648,24 @@ body {
 	&__price-value {
 		color: #222;
 	}
-
+	// .product__list
+	&__list {
+		margin-top: 1.25rem;
+		& li {
+			display: flex;
+			gap: 0.887rem;
+			&::before {
+				@extend %ic, .icon-check-alternate;
+				color: $red;
+				width: 1.25rem;
+				height: 1.25rem;
+				font-size: 1.25rem;
+			}
+			&:not(:last-child) {
+				margin-bottom: 0.75rem;
+			}
+		}
+	}
 	// .product__btn
 	&__btn {
 		margin-top: 1.25rem;

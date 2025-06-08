@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Электронные подписи'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 4
+            })
+            <main class="page">
+                <section class="promo">
+                    <div class="promo__container">
+                        <div class="promo__content">
+                            <div class="promo__column">
+                                <div class="promo__offer">
+                                    <h1 class="promo__heading">Электронная подпись за&nbsp;1&nbsp;час для: госзакупок, отчетности, торгов </h1>
+                                    <ul class="promo__benefits promo__benefits--list">
+                                        <li class="promo__benefit icon-check-alternate">Автонастройка компьютера — подпись работает без ручных настроек</li>
+                                        <li class="promo__benefit icon-check-alternate">Бесплатное подписание через Контур.Крипто (достаточно базового тарифа)</li>
+                                        <li class="promo__benefit icon-check-alternate">Бесплатный перевыпуск сертификата в некоторых тарифах</li>
+                                    </ul>
+                                </div>
+                                <form action="#" class="promo__form">
+                                    <div class="promo__form-caption h4">Оставьте заявку, на покупку или демоверсию</div>
+                                    <div class="promo__form-fields">
+                                        <input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+                                        <input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+                                        <button type="submit" class="btn btn-primary">Подобрать</button>
+                                    </div>
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="privacy" class="form__checkbox-input hidden" hidden>
+                                        <span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="promo__column">
+                                <div class="promo__image">
+                                    <img src="@img/promo/signature.jpg" class="cover-image" alt="Промо фото">
+                                </div>
+                                <ul class="promo__list">
+                                    <li class="promo__item icon-kontur">Официальный партнёр «Контур»</li>
+                                    <li class="promo__item icon-support">Техподдержка 24/7</li>
+                                    <li class="promo__item icon-connect">Быстрое подключение</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="products">
+                    <div class="products__container">
+                        <h2 class="products__title">
+                            Виды электронные подписей
+                        </h2>
+                        <div class="products__btns">
+                            <a href="" class="products__btn btn btn-grey-outline active">Для сотрудников</a>
+                            <a href="" class="products__btn btn btn-grey-outline">Для физических лиц</a>
+                        </div>
+                        <div class="products__slider products__slider--large swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="product swiper-slide">
+                                    <a href="/product.html" class="product__name h3">Универсальная</a>
+                                    <p class="product__desc text-block">
+                                        Подходит для сдачи отчётности, ЭДО с контрагентами и госорганами, работы на порталах и участия в торгах. Доступна для 550+ площадок.
+                                    </p>
+                                    <div class="product__footer">
+                                        <div class="product__price">
+                                            <span class="product__price-value h3">18 200&nbsp;₽</span> на 12 месяцев
+                                        </div>
+                                        <a href="/product.html" class="product__btn btn btn-primary-outline icon-chevron-right">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li class="product swiper-slide">
+                                    <a href="/product.html" class="product__name h3">Для торгов и закупок</a>
+                                    <ul class="product__list text-block">
+                                        <li>Квалифицированный сертификат на сотрудника — для работы по 44-ФЗ, 223-ФЗ, коммерческим закупкам и торгам банкротов.</li>
+                                        <li>Поддержка любых ЭТП — можно добавить OID для B2B, Фабрикант, РТП и других площадок.</li>
+                                    </ul>
+                                    <div class="product__footer">
+                                        <div class="product__price">
+                                            <span class="product__price-value h3">18 200&nbsp;₽</span> на 12 месяцев
+                                        </div>
+                                        <a href="/product.html" class="product__btn btn btn-primary-outline icon-chevron-right">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li class="product swiper-slide">
+                                    <a href="/product.html" class="product__name h3">Для базовых задач</a>
+                                    <p class="product__desc text-block">
+                                        Квалифицированный сертификат на сотрудника компании для:
+                                    </p>
+                                    <ul class="product__list text-block">
+                                        <li>Сдачи отчетности и ЭДО</li>
+                                        <li>Работы с онлайн-кассами</li>
+                                        <li>Взаимодействия с госсистемами</li>
+                                    </ul>
+                                    <div class="product__footer">
+                                        <div class="product__price">
+                                            <span class="product__price-value h3">18 200&nbsp;₽</span> на 12 месяцев
+                                        </div>
+                                        <a href="/product.html" class="product__btn btn btn-primary-outline icon-chevron-right">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li class="product swiper-slide">
+                                    <a href="/product.html" class="product__name h3">Для ЕГАИС</a>
+                                    <p class="product__desc text-block">
+                                        Квалифицированная электронная подпись для работы с алкогольной отчетностью
+                                    </p>
+                                    <div class="product__footer">
+                                        <div class="product__price">
+                                            <span class="product__price-value h3">18 200&nbsp;₽</span> на 12 месяцев
+                                        </div>
+                                        <a href="/product.html" class="product__btn btn btn-primary-outline icon-chevron-right">Подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="prod ucts__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="products">
+                    <div class="products__container">
+                        <h2 class="products__title">
+                            Дополнительные услуги
+                        </h2>
+                        <div class="products__slider products__slider--large swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="product product--row swiper-slide">
+                                    <div class="product__image">
+                                        <img src="@img/extras/rutocken-lite.png" alt="Рутокен">
+                                    </div>
+                                    <div class="product__main">
+                                        <a href="/product.html" class="product__name h3">Носитель Рутокен Lite</a>
+                                        <p class="product__subtitle">Безопасное хранение электронной подписи</p>
+                                        <p class="product__desc text-block">
+                                            Для чего нужен:
+                                        </p>
+                                        <ul class="product__list text-block">
+                                            <li>Хранение квалифицированной электронной подписи (КЭП)</li>
+                                            <li>Сдача отчетности в контролирующие органы</li>
+                                            <li>Работа на госпорталах (Госуслуги, ФНС, Росреестр и др.)</li>
+                                            <li>Участие в электронных торгах</li>
+                                        </ul>
+                                        <div class="product__footer">
+                                            <div class="product__price">
+                                                Цена: <span class="product__price-value h3">10 000&nbsp;₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product product--row swiper-slide">
+                                    <div class="product__image">
+                                        <img src="@img/extras/rutocken-3.0.png" alt="Рутокен">
+                                    </div>
+                                    <div class="product__main">
+                                        <a href="/product.html" class="product__name h3">Носитель Рутокен ЭЦП 3.0</a>
+                                        <p class="product__subtitle">Защищённый USB-ключ для работы с электронной подписью.</p>
+                                        <p class="product__desc text-block">
+                                            Для чего нужен:
+                                        </p>
+                                        <ul class="product__list text-block">
+                                            <li>Хранение квалифицированной электронной подписи (КЭП)</li>
+                                            <li>Сдача отчетности в контролирующие органы</li>
+                                            <li>Работа на Госуслугах, Росреестре, электронных торговых площадках</li>
+                                            <li>Подписание документов и договоров</li>
+                                        </ul>
+                                        <div class="product__footer">
+                                            <div class="product__price">
+                                                Цена: <span class="product__price-value h3">10 000&nbsp;₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product product--row swiper-slide">
+                                    <div class="product__image">
+                                        <img src="@img/extras/crypro-pro.png" alt="Рутокен">
+                                    </div>
+                                    <div class="product__main">
+                                        <a href="/product.html" class="product__name h3">Лицензии Крипто ПРО</a>
+                                        <p class="product__subtitle">Для работы с ЭП и защиты данных. Устанавливается на ПК или в подпись.</p>
+                                        <p class="product__desc text-block">
+                                            Для чего нужен:
+                                        </p>
+                                        <ul class="product__list text-block">
+                                            <li>Сдача отчетности</li>
+                                            <li>Электронные торги</li>
+                                            <li>Госуслуги</li>
+                                            <li>Защита документов</li>
+                                        </ul>
+                                        <div class="product__footer">
+                                            <div class="product__price">
+                                                Цена: <span class="product__price-value h3">10 000&nbsp;₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product product--row swiper-slide">
+                                    <div class="product__image">
+                                        <img src="@img/extras/rutocken-3.0.png" alt="Рутокен">
+                                    </div>
+                                    <div class="product__main">
+                                        <a href="/product.html" class="product__name h3">Носитель Рутокен ЭЦП 3.0</a>
+                                        <p class="product__subtitle">Защищённый USB-ключ для работы с электронной подписью.</p>
+                                        <p class="product__desc text-block">
+                                            Для чего нужен:
+                                        </p>
+                                        <ul class="product__list text-block">
+                                            <li>Хранение квалифицированной электронной подписи (КЭП)</li>
+                                            <li>Сдача отчетности в контролирующие органы</li>
+                                            <li>Работа на Госуслугах, Росреестре, электронных торговых площадках</li>
+                                            <li>Подписание документов и договоров</li>
+                                        </ul>
+                                        <div class="product__footer">
+                                            <div class="product__price">
+                                                Цена: <span class="product__price-value h3">10 000&nbsp;₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="products__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="consult">
+                    <div class="consult__container">
+                        <div class="consult__body">
+                            <div class="consult__main">
+                                <h2 class="consult__title">Не знаете какой тариф выбрать?</h2>
+                                <p class="consult__desc h4">Наши специалисты проконсультируют по тарифным планам и возможностям продукта, порекомендуют только те инструменты, которые:</p>
+                                <ul class="consult__list text-block">
+                                    <li class="consult__list-item icon-check-alternate">Сэкономят вам деньги — подберём оптимальный вариант;</li>
+                                    <li class="consult__list-item icon-check-alternate">Автоматизируют рутину — отчётность, документооборот, учёт;</li>
+                                    <li class="consult__list-item icon-check-alternate">Избавят от проблем — штрафы, ошибки, потеря времени.</li>
+                                </ul>
+                            </div>
+                            @@include('./html/_consult-form.html')
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_faq.html', {})
+                @@include('html/_reviews.html', {})
+                <section class="about">
+                    <div class="about__container">
+                        <div class="about__body">
+                            <div class="about__offer">
+                                <h2 class="about__title">
+                                    ООО «ЦИТ Хай-Тёк»
+                                </h2>
+                                <p class="about__desc h4">Является официальным партнёром компании СКБ Контур.</p>
+                                <div class="about__text text-block">
+                                    <p>Мы предлагаем продукты Контура в Норильске. Поможем выбрать программу, исходя из ваших потребностей. Выгодно и быстро подключим веб-сервисы Контур.Экстерн, Контур.Фокус и другие. Выпустим сертификат электронной подписи и научим работать в сервисах.</p>
+                                    <p>Выбирайте надёжные и удобные решения для бизнеса от СКБ Контур вместе с нами!</p>
+                                </div>
+                                <a href="" class="about__btn btn btn-primary icon-chevron-right">Подробнее</a>
+                            </div>
+                            <div class="about__image">
+                                <img src="@img/promo/about.jpg" class="cover-image" alt="Компания">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_news.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

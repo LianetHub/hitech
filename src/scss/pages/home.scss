@@ -23,15 +23,12 @@
 	}
 	// .promo__offer
 	&__offer {
+		background: #222;
+		color: #fff;
+		padding: rem(30) rem(20);
+		border-radius: rem(20);
 		@media (min-width: $md5) {
-			border-radius: 1.25rem;
-			color: #fff;
-			padding: 2rem 1.5rem;
-			background: url("@img/star.svg") calc(100% + 0.5rem) calc(100% + 0.5rem) / 3.5625rem 3.5625rem no-repeat, #222;
-		}
-		@media (min-width: $md2) {
-			background: url("@img/star.svg") calc(100% + 0.5rem) calc(100% + 0.5rem) / 6.5625rem 6.5625rem no-repeat, #222;
-			padding: 3rem 2.5rem;
+			padding: rem(50) rem(40);
 		}
 		@media (min-width: $md0) {
 			padding: 4.88rem 2.5rem;
@@ -56,37 +53,34 @@
 		&--green {
 			background: #144941;
 			color: #fff;
-			padding: rem(30) rem(20);
-			border-radius: rem(20);
-			@media (min-width: $md5) {
-				padding: rem(50) rem(40);
-			}
 		}
 		&--violet {
 			background: #66142a;
 			color: #fff;
-			padding: rem(30) rem(20);
-			border-radius: rem(20);
-			@media (min-width: $md5) {
-				padding: rem(50) rem(40);
-			}
 		}
 		&--teal {
 			background: #023f53;
 			color: #fff;
-			padding: rem(30) rem(20);
-			border-radius: rem(20);
-			@media (min-width: $md5) {
-				padding: rem(50) rem(40);
-			}
 		}
 		&--blue {
 			background: #153276;
 			color: #fff;
-			padding: rem(30) rem(20);
-			border-radius: rem(20);
+		}
+		&--offer {
+			background: transparent;
+			color: $text;
+			border-radius: 0;
+			padding: 1.88rem 1.25rem;
+			border-radius: 1.25rem;
 			@media (min-width: $md5) {
-				padding: rem(50) rem(40);
+				padding: 2rem 1.5rem;
+				border-radius: 1.25rem;
+				background: url("@img/star.svg") calc(100% + 0.5rem) calc(100% + 0.5rem) / 3.5625rem 3.5625rem no-repeat, #222;
+				color: #fff;
+			}
+			@media (min-width: $md2) {
+				padding: 3rem 2.5rem;
+				background: url("@img/star.svg") calc(100% + 0.5rem) calc(100% + 0.5rem) / 6.5625rem 6.5625rem no-repeat, #222;
 			}
 		}
 	}
