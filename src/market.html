@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Маркет '
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": 8
+            })
+            <main class="page">
+                <nav aria-label="Постраничная навигация" class="breadcrumbs">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link">Главная страница</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link active">Маркет</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <section class="promo">
+                    <div class="promo__container">
+                        <div class="promo__content">
+                            <div class="promo__column">
+                                <div class="promo__offer promo__offer--blue">
+                                    <div class="promo__offer-header">
+                                        <div class="promo__icon">
+                                            <img src="@img/icons/market-74.svg" alt="Иконка">
+                                        </div>
+                                        <h1 class="promo__heading">Маркет</h1>
+                                    </div>
+                                    <p class="promo__caption h3">Профессиональная автоматизация торговли</p>
+                                    <p class="promo__caption h4">Комплексные решения для бизнеса любого масштаба:</p>
+                                    <ul class="promo__benefits promo__benefits--list">
+                                        <li class="promo__benefit icon-check-alternate">Полный цикл автоматизации – от онлайн-касс до товароучета</li>
+                                        <li class="promo__benefit icon-check-alternate">Интеграция с ЕГАИС и ОФД – соответствие 54-ФЗ и 152-ФЗ</li>
+                                        <li class="promo__benefit icon-check-alternate">Гибкие настройки – для розничных сетей, HoReCa и сервисных компаний</li>
+                                    </ul>
+                                </div>
+                                <form action="#" class="promo__form">
+                                    <div class="promo__form-caption h4">Оставьте заявку, на покупку или демоверсию</div>
+                                    <div class="promo__form-fields">
+                                        <input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+                                        <input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+                                        <button type="submit" class="btn btn-blue">Подобрать</button>
+                                    </div>
+                                    <label class="form__checkbox form__checkbox--blue">
+                                        <input type="checkbox" name="privacy" class="form__checkbox-input hidden" hidden>
+                                        <span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="promo__column">
+                                <div class="promo__image ">
+                                    <img src="@img/promo/market.jpg" class="cover-image" alt="Промо фото">
+                                </div>
+                                <ul class="promo__list promo__list--blue">
+                                    <li class="promo__item icon-kontur">Официальный партнёр «Контур»</li>
+                                    <li class="promo__item icon-support">Техподдержка 24/7</li>
+                                    <li class="promo__item icon-connect">Быстрое подключение</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                @@include('html/_faq.html', {})
+                @@include('html/_reviews.html', {})
+                @@include('html/_news.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

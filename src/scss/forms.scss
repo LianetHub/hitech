@@ -357,6 +357,69 @@
 		}
 	}
 
+	&.btn-blue {
+		background: #2290ff;
+		color: $white;
+		border-color: #2290ff;
+		&:hover {
+			background-color: darken($color: #2290ff, $amount: 10);
+			border-color: darken($color: #2290ff, $amount: 10);
+		}
+		&:active {
+			background-color: darken($color: #2290ff, $amount: 20);
+			border-color: darken($color: #2290ff, $amount: 20);
+		}
+		&:disabled,
+		&[aria-disabled="true"] {
+			cursor: default;
+			pointer-events: none;
+			border-color: #dadada;
+			background-color: #dadada;
+		}
+	}
+
+	&.btn-orange {
+		background: #ff8227;
+		color: $white;
+		border-color: #ff8227;
+		&:hover {
+			background-color: darken($color: #ff8227, $amount: 10);
+			border-color: darken($color: #ff8227, $amount: 10);
+		}
+		&:active {
+			background-color: darken($color: #ff8227, $amount: 20);
+			border-color: darken($color: #ff8227, $amount: 20);
+		}
+		&:disabled,
+		&[aria-disabled="true"] {
+			cursor: default;
+			pointer-events: none;
+			border-color: #dadada;
+			background-color: #dadada;
+		}
+	}
+
+	&.btn-tiffany {
+		background: #00ccae;
+		color: $white;
+		border-color: #00ccae;
+		&:hover {
+			background-color: darken($color: #00ccae, $amount: 10);
+			border-color: darken($color: #00ccae, $amount: 10);
+		}
+		&:active {
+			background-color: darken($color: #00ccae, $amount: 20);
+			border-color: darken($color: #00ccae, $amount: 20);
+		}
+		&:disabled,
+		&[aria-disabled="true"] {
+			cursor: default;
+			pointer-events: none;
+			border-color: #dadada;
+			background-color: #dadada;
+		}
+	}
+
 	&.btn-sm {
 		padding: 0.88rem 1.88rem;
 	}

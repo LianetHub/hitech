@@ -103,6 +103,10 @@
 	&__icon {
 		width: 3rem;
 		height: 3rem;
+		& img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 	// .promo__caption
 	&__caption {
@@ -169,6 +173,17 @@
 				&::before {
 					font-size: 1.75rem;
 				}
+			}
+		}
+		&--list {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1.25rem;
+			.promo__benefit {
+				padding: 0;
+				border: 0;
+				font-weight: 400;
 			}
 		}
 	}
