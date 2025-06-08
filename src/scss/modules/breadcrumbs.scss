@@ -1,22 +1,27 @@
 .breadcrumbs {
-	display: flex;
-	flex-wrap: wrap;
-	padding-bottom: 2.12rem;
+	padding: 2.25rem 0 1.25rem;
+	// .breadcrumbs__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	// .breadcrumbs__item
 	&__item {
 		display: flex;
 		align-items: center;
-		color: #4b4b4b;
 		font-size: 1.125rem;
-		line-height: 140%;
+		line-height: 124%;
+		color: #858585;
 		&:not(:last-child) {
 			&::before {
 				margin: 0 0.5rem;
-				font-size: rem(4);
+				font-size: em(8);
 				color: currentColor;
 				order: 1;
-				transform: rotate(-90deg);
-				@extend %ic, .icon-chevron;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@extend %ic, .icon-chevron-right;
 			}
 		}
 	}
@@ -25,11 +30,12 @@
 		transition: color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: $red;
 			}
 		}
 		&.active {
 			pointer-events: none;
+			color: #222;
 		}
 	}
 }

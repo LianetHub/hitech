@@ -1,0 +1,125 @@
+.contacts {
+	padding: 0 0 rem(60);
+	@media (min-width: $md3) {
+		padding: 0 0 rem(100);
+	}
+	// .contacts__container
+	&__container {
+	}
+	// .contacts__body
+	&__body {
+		gap: rem(30);
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $md2) {
+			flex-direction: row;
+		}
+	}
+	// .contacts__side
+	&__side {
+		border-radius: 1.25rem;
+		background: #222;
+		color: #fff;
+		padding: 2.5rem;
+		flex: 0 0 rem(533);
+	}
+	// .contacts__title
+	&__title {
+	}
+	// .contacts__list
+	&__list {
+		margin-top: 2.5rem;
+	}
+	// .contacts__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+		&:has(.contacts__socials) {
+			flex-direction: row;
+			gap: 1rem;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		@media (min-width: $md5) {
+			gap: rem(30);
+			flex-direction: row;
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	// .contacts__name
+	&__name {
+		color: #858585;
+		font-size: 1.1875rem;
+		line-height: 124%;
+		@media (min-width: $md5) {
+			flex: 0 0 10.75rem;
+		}
+	}
+	// .contacts__values
+	&__values {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 120%;
+	}
+	// .contacts__link
+	&__link {
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	// .contacts__socials
+	&__socials {
+		display: flex;
+		gap: 1.25rem;
+	}
+	// .contacts__social
+	&__social {
+		font-size: 2.5rem;
+		transition: color 0.3s ease;
+		&.icon-whatsapp {
+			color: #3cbc5d;
+			@media (any-hover: hover) {
+				&:hover {
+					color: darken($color: #3cbc5d, $amount: 10);
+				}
+			}
+		}
+		&.icon-telegram {
+			color: #2290ff;
+			@media (any-hover: hover) {
+				&:hover {
+					color: darken($color: #2290ff, $amount: 10);
+				}
+			}
+		}
+	}
+	// .contacts__map
+	&__map {
+		border-radius: rem(20);
+		filter: grayscale(1);
+		position: relative;
+		min-height: 25rem;
+		width: 100%;
+		@media (min-width: $md5) {
+			min-height: 37.625rem;
+		}
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

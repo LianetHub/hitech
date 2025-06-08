@@ -87,6 +87,9 @@
 				color: $red;
 			}
 		}
+		&.active {
+			color: $red;
+		}
 	}
 	// .header__socials
 	&__socials {
@@ -259,7 +262,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		gap: 1em;
+
 		justify-content: flex-start;
 		width: 100%;
 		font-weight: 500;
@@ -271,8 +274,12 @@
 			font-size: 0.75rem;
 		}
 		@media (min-width: $md2) {
+			gap: 0.25rem;
 			font-size: 0.875rem;
 			justify-content: space-between;
+		}
+		@media (min-width: $md1) {
+			font-size: 1rem;
 		}
 		@media (min-width: $md0) {
 			font-size: 1.125rem;
