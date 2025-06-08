@@ -1,8 +1,12 @@
 .breadcrumbs {
-	padding: 2.25rem 0 1.25rem;
+	padding: rem(20) 0 1.25rem;
+	@media (min-width: $md4) {
+		padding: 2.25rem 0 1.25rem;
+	}
 	& + * {
 		padding-top: 1.25rem !important;
-		&.contacts {
+		&.contacts,
+		&.article {
 			padding-top: 0 !important;
 		}
 	}

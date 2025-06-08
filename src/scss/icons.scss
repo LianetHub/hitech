@@ -17,6 +17,13 @@
 		display: block;
 	}
 }
+
+.icon-calendar:before {
+	content: "\e90e";
+}
+.icon-time:before {
+	content: "\e90f";
+}
 .icon-phone:before {
 	content: "\e90d";
 }
