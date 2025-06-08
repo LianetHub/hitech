@@ -1,0 +1,44 @@
+[
+    {
+        "className": " swiper-slide",
+        "image": "@img/products/MSPOS‑K.png",
+        "name": "MSPOS‑K",
+        "desc": "Компактное устройство для приёма безналичных платежей с поддержкой NFC, QR-кодов и банковских карт",
+        "price": "18&nbsp;200"
+    },
+    {
+        "className": " swiper-slide",
+        "image": "@img/products/PAX-A920.png",
+        "name": "PAX A920",
+        "desc": "Современный Android-терминал с большим сенсорным экраном, поддержкой NFC, QR-платежей",
+        "price": "18&nbsp;200"
+    },
+    {
+        "className": " swiper-slide",
+        "image": "@img/products/Ingenico-Move-5000.png",
+        "name": "Ingenico Move 5000",
+        "desc": "Компактный и мобильный терминал с 4G и Wi‑Fi, работающий на ОС Android. Идеален для курьеров.",
+        "price": "18&nbsp;200"
+    },
+    {
+        "className": " swiper-slide",
+        "image": "@img/products/MSPOS‑K.png",
+        "name": "MSPOS‑K",
+        "desc": "Компактное устройство для приёма безналичных платежей с поддержкой NFC, QR-кодов и банковских карт",
+        "price": "18&nbsp;200"
+    },
+    {
+        "className": " swiper-slide",
+        "image": "@img/products/PAX-A920.png",
+        "name": "PAX A920",
+        "desc": "Современный Android-терминал с большим сенсорным экраном, поддержкой NFC, QR-платежей",
+        "price": "18&nbsp;200"
+    },
+    {
+        "className": " swiper-slide",
+        "image": "@img/products/Ingenico-Move-5000.png",
+        "name": "Ingenico Move 5000",
+        "desc": "Компактный и мобильный терминал с 4G и Wi‑Fi, работающий на ОС Android. Идеален для курьеров.",
+        "price": "18&nbsp;200"
+    }
+]

@@ -1,0 +1,118 @@
+.catalog {
+	padding: rem(30) 0 rem(30);
+	@media (min-width: $md4) {
+		padding: rem(60) 0 rem(30);
+	}
+	@media (min-width: $md2) {
+		padding: rem(100) 0 rem(30);
+	}
+	// .catalog__container
+	&__container {
+	}
+	// .catalog__title
+	&__title {
+	}
+	// .catalog__body
+	&__body {
+		margin-top: rem(20);
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+		@media (min-width: $md3) {
+			flex-direction: row;
+			align-items: flex-start;
+			gap: rem(40);
+		}
+		@media (min-width: $md0) {
+			gap: rem(90);
+		}
+	}
+	// .catalog__sidebar
+	&__sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+		@media (min-width: $md3) {
+			gap: rem(20);
+			position: sticky;
+			top: 1rem;
+			flex: 0 0 rem(320);
+		}
+		@media (min-width: $md0) {
+			flex: 0 0 rem(377);
+		}
+	}
+	// .catalog__category
+	&__category {
+		&.active {
+			background: $red;
+			color: $white;
+			border-color: $red;
+			&:hover {
+				background-color: #fe3434;
+				border-color: #fe3434;
+				color: $white;
+			}
+			&:active {
+				background-color: $violet;
+				border-color: $violet;
+				color: $white;
+			}
+		}
+	}
+	// .catalog__products
+	&__products {
+		min-width: 0;
+	}
+	// .catalog__products-block
+	&__products-block {
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+			@media (min-width: $md3) {
+				margin-bottom: rem(80);
+			}
+		}
+	}
+	// .catalog__products-slider
+	&__products-slider {
+		margin-top: rem(30);
+	}
+	// .catalog__products-header
+	&__products-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .catalog__products-title
+	&__products-title {
+	}
+	// .catalog__products-controls
+	&__products-controls {
+		display: none;
+		@media (min-width: $md4) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: rem(20);
+		}
+	}
+	// .catalog__products-prev
+	&__products-prev {
+	}
+	// .catalog__products-next
+	&__products-next {
+	}
+	// .catalog__products-slider
+	&__products-slider {
+		overflow: visible;
+		@media (min-width: $md4) {
+			overflow: hidden;
+		}
+	}
+	// .catalog__products-pagination
+	&__products-pagination {
+		@media (min-width: $md4) {
+			display: none;
+		}
+	}
+}

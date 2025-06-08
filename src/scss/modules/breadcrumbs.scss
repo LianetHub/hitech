@@ -1,12 +1,9 @@
 .breadcrumbs {
 	padding: 2.25rem 0 1.25rem;
 	& + * {
-		padding-top: 0 !important;
-		&.news {
-			padding-top: 1.25rem !important;
-		}
-		&.products {
-			padding-top: 1.25rem !important;
+		padding-top: 1.25rem !important;
+		&.contacts {
+			padding-top: 0 !important;
 		}
 	}
 	// .breadcrumbs__list

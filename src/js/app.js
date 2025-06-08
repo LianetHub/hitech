@@ -353,6 +353,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
             })
         })
+    }
+
+    if (document.querySelectorAll('.catalog__products-slider').length > 0) {
+        document.querySelectorAll('.catalog__products-slider').forEach(function (slider) {
+            const wrapper = slider.closest('.catalog__products-block');
+            const prevBtn = wrapper.querySelector('.catalog__products-prev');
+            const nextBtn = wrapper.querySelector('.catalog__products-next');
+            const pagination = wrapper.querySelector('.catalog__products-pagination');
+
+            new Swiper(slider, {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                watchOverflow: true,
+                pagination: {
+                    el: pagination,
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: nextBtn,
+                    prevEl: prevBtn,
+                },
+                breakpoints: {
+                    575.98: {
+                        slidesPerView: 1.5,
+                    },
+                    767.98: {
+                        slidesPerView: 2,
+                    },
+                    1699.98: {
+                        slidesPerView: 3,
+                    }
+                },
+            })
+        })
 
     }
 
@@ -378,6 +412,35 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("resize", getSwiper);
     }
 
+    // calalog highlight active category
+    const sections = document.querySelectorAll('.catalog__products-block');
+    const navLinks = document.querySelectorAll('.catalog__category');
+
+    if (sections.length !== 0 || navLinks.length !== 0) {
+
+        const options = {
+            root: null,
+            rootMargin: '0px 0px -50% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id.replace(/^#/, '');
+
+                    navLinks.forEach(link => {
+                        const hrefId = link.getAttribute('href')?.replace(/^#/, '');
+                        link.classList.toggle('active', hrefId === sectionId);
+                    });
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            if (section.id) observer.observe(section);
+        });
+    }
 
 
 

@@ -9,8 +9,15 @@
 		height: 100%;
 		background: #f4f7fb;
 		z-index: 10;
+		transform: translateX(100%);
+		transition: transform 0.3s ease;
 		@media (min-width: $md3) {
 			display: none;
+		}
+	}
+	&.open-menu {
+		&::before {
+			transform: none;
 		}
 	}
 	// .header__container
@@ -262,7 +269,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-
+		gap: rem(20);
 		justify-content: flex-start;
 		width: 100%;
 		font-weight: 500;
