@@ -293,7 +293,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 991.98: {
                     slidesPerView: 3,
                 },
-                1439.98: {
+                // 1439.98: {
+                //     slidesPerView: 4,
+                // },
+                1279.98: {
                     slidesPerView: 4,
                 },
             }
@@ -319,7 +322,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 991.98: {
                     slidesPerView: 3,
                 },
-                1439.98: {
+                // 1439.98: {
+                //     slidesPerView: 4,
+                // },
+                1279.98: {
                     slidesPerView: 4,
                 },
             }
@@ -364,12 +370,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     767.98: {
                         slidesPerView: 2,
                     },
+                    // 1279.98: {
+                    //     slidesPerView: 3,
+                    // },
+                    // 1699.98: {
+                    //     slidesPerView: 4,
+                    // }
                     1279.98: {
-                        slidesPerView: 3,
-                    },
-                    1699.98: {
                         slidesPerView: 4,
-                    }
+                    },
                 }
             })
         })
@@ -401,7 +410,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     767.98: {
                         slidesPerView: 2,
                     },
-                    1699.98: {
+                    // 1699.98: {
+                    //     slidesPerView: 3,
+                    // }
+                    1279.98: {
                         slidesPerView: 3,
                     }
                 },
@@ -440,7 +452,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         slidesPerView: 2,
                         autoHeight: false,
                     },
-                    1699.98: {
+                    // 1699.98: {
+                    //     slidesPerView: 3,
+                    //     autoHeight: false,
+                    // }
+                    1279.98: {
                         slidesPerView: 3,
                         autoHeight: false,
                     }
@@ -464,9 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
             breakpoints: {
                 991.98: {
                     slidesPerView: 2,
-
                 },
-
             },
         })
 

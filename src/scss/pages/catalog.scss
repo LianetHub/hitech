@@ -23,7 +23,10 @@
 			align-items: flex-start;
 			gap: rem(40);
 		}
-		@media (min-width: $md0) {
+		// @media (min-width: $md0) {
+		// 	gap: rem(90);
+		// }
+		@media (min-width: $md2) {
 			gap: rem(90);
 		}
 	}
@@ -38,7 +41,10 @@
 			top: 1rem;
 			flex: 0 0 rem(320);
 		}
-		@media (min-width: $md0) {
+		// @media (min-width: $md0) {
+		// 	flex: 0 0 rem(377);
+		// }
+		@media (min-width: $md2) {
 			flex: 0 0 rem(377);
 		}
 	}

@@ -84,10 +84,13 @@
 	// .article__image
 	&__image {
 		flex-shrink: 0;
+		// @media (min-width: $md2) {
+		// 	width: 30.125rem;
+		// }
+		// @media (min-width: $md0) {
+		// 	width: 40.125rem;
+		// }
 		@media (min-width: $md2) {
-			width: 30.125rem;
-		}
-		@media (min-width: $md0) {
 			width: 40.125rem;
 		}
 		& img {
@@ -232,7 +235,10 @@
 			position: sticky;
 			flex: 0 0 25rem;
 		}
-		@media (min-width: $md1) {
+		// @media (min-width: $md1) {
+		// 	flex: 0 0 33.375rem;
+		// }
+		@media (min-width: $md2) {
 			flex: 0 0 33.375rem;
 		}
 	}

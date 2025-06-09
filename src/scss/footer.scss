@@ -33,7 +33,10 @@
 			gap: 2.5rem;
 			flex-direction: row;
 		}
-		@media (min-width: $md0) {
+		// @media (min-width: $md0) {
+		// 	padding-right: rem(23);
+		// }
+		@media (min-width: $md2) {
 			padding-right: rem(23);
 		}
 	}

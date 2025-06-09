@@ -13,7 +13,10 @@
 	&__header {
 		display: grid;
 		gap: rem(30);
-		@media (min-width: $md1) {
+		// @media (min-width: $md1) {
+		// 	grid-template-columns: 2fr 1fr;
+		// }
+		@media (min-width: $md2) {
 			grid-template-columns: 2fr 1fr;
 		}
 	}
@@ -154,12 +157,16 @@
 		@media (min-width: $md3) {
 			padding: 2.5rem;
 		}
+		// @media (min-width: $md2) {
+		// 	gap: 3.5rem;
+		// 	flex-direction: row;
+		// }
+		// @media (min-width: $md0) {
+		// 	gap: 5.87rem;
+		// }
 		@media (min-width: $md2) {
-			gap: 3.5rem;
-			flex-direction: row;
-		}
-		@media (min-width: $md0) {
 			gap: 5.87rem;
+			flex-direction: row;
 		}
 	}
 	// .product-card__tabs
@@ -170,10 +177,13 @@
 		@media (min-width: $md4) {
 			gap: 1.25rem;
 		}
+		// @media (min-width: $md2) {
+		// 	flex: 0 0 rem(340);
+		// }
+		// @media (min-width: $md0) {
+		// 	flex: 0 0 rem(429);
+		// }
 		@media (min-width: $md2) {
-			flex: 0 0 rem(340);
-		}
-		@media (min-width: $md0) {
 			flex: 0 0 rem(429);
 		}
 	}

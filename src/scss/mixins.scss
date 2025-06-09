@@ -97,10 +97,10 @@
 // );
 
 $dimensions: (
-	fullHD: 1708,
+	fullHD: 1920,
 	desktop: 1024,
 	tablet: 768,
-	mobile: 320,
+	mobile: 375,
 );
 
 @function pxToVw($value, $dimension) {
