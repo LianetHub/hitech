@@ -113,7 +113,32 @@ document.addEventListener("DOMContentLoaded", () => {
         phoneInput.addEventListener('paste', onPhonePaste, false);
     }
 
+    // services promotions Modal trigger
+    document.querySelectorAll('.services__card-btn[data-fancybox]').forEach(button => {
+        let shown = false;
 
+        button.addEventListener('mouseenter', function () {
+
+            if (!shown && !Fancybox.getInstance() && document.body.classList.contains('_pc')) {
+                const src = this.getAttribute('href');
+                Fancybox.show([{
+                    src: src,
+
+                    dragToClose: false,
+                    closeButton: false
+                }],
+                    {
+                        on: {
+                            close: () => {
+                                shown = false;
+                            }
+                        }
+                    });
+                shown = true;
+            }
+        })
+
+    });
 
 
     // click handlers

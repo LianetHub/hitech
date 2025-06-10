@@ -37,12 +37,12 @@
 	<meta property="twitter:image:src" content="/OG.jpg">
 	<!-- Twitter -->
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250609225930">
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250609225930">
-	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250609225930">
+	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250610121147">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250610121147">
+	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250610121147">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250609225930">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250609225930">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250610121147">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250610121147">
 </head>
 
 <body>
@@ -216,7 +216,7 @@
 								<p class="services__card-desc">Юридически значимый ЭДО&nbsp;между&nbsp;компаниями&nbsp;— мгновенно, без&nbsp;бумаги и&nbsp;рисков</p>
 								<div class="services__card-btns">
 									<a href="" class="services__card-btn btn btn-primary-outline icon-chevron-right">Подробнее</a>
-									<a href="" class="services__card-btn btn btn-primary">АКЦИЯ!</a>
+									<a href="#promotion-diadok" data-fancybox class="services__card-btn btn btn-primary">АКЦИЯ!</a>
 								</div>
 							</li>
 							<li class="services__card swiper-slide">
@@ -227,7 +227,7 @@
 								<p class="services__card-desc">Отчёты, бухгалтерия, зарплата, отпускные и&nbsp;больничные&nbsp;— в&nbsp;едином сервисе</p>
 								<div class="services__card-btns">
 									<a href="" class="services__card-btn btn btn-primary-outline icon-chevron-right">Подробнее</a>
-									<a href="" class="services__card-btn btn btn-primary">АКЦИЯ!</a>
+									<a href="#promotion-extern" data-fancybox class="services__card-btn btn btn-primary">АКЦИЯ!</a>
 								</div>
 							</li>
 							<li class="services__card swiper-slide">
@@ -238,7 +238,7 @@
 								<p class="services__card-desc">Онлайн-учёт товаров, касса и&nbsp;печать номенклатуры по&nbsp;54-ФЗ, работа с&nbsp;ЕГАИС</p>
 								<div class="services__card-btns">
 									<a href="" class="services__card-btn btn btn-primary-outline icon-chevron-right">Подробнее</a>
-									<a href="" class="services__card-btn btn btn-primary">АКЦИЯ!</a>
+									<a href="#promotion-market" data-fancybox class="services__card-btn btn btn-primary">АКЦИЯ!</a>
 								</div>
 							</li>
 						</ul>
@@ -797,6 +797,57 @@
 				</div>
 			</div>
 		</footer>
+		<div id="promotion-diadok" class="popup">
+			<button type="button" data-fancybox-close class="popup__close icon-close"></button>
+			<h2 class="popup__title">Акция на Диадок</h2>
+			<p class="popup__subtitle">Заполните форму и мы свяжемся с вами для уточнения деталей и оформления.</p>
+			<form action="#" class="popup__form form">
+				<input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+				<input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+				<textarea name="message" class="form__control" placeholder="Комментарии к заказу"></textarea>
+				<div class="form__bottom">
+					<label class="form__checkbox">
+						<input type="checkbox" name="privacy" checked class="form__checkbox-input hidden" hidden>
+						<span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+					</label>
+					<button type="submit" class="form__btn btn btn-primary">Заказать</button>
+				</div>
+			</form>
+		</div>
+		<div id="promotion-extern" class="popup">
+			<button type="button" data-fancybox-close class="popup__close icon-close"></button>
+			<h2 class="popup__title">Акция на Экстерн</h2>
+			<p class="popup__subtitle">Заполните форму и мы свяжемся с вами для уточнения деталей и оформления.</p>
+			<form action="#" class="popup__form form">
+				<input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+				<input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+				<textarea name="message" class="form__control" placeholder="Комментарии к заказу"></textarea>
+				<div class="form__bottom">
+					<label class="form__checkbox">
+						<input type="checkbox" name="privacy" checked class="form__checkbox-input hidden" hidden>
+						<span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+					</label>
+					<button type="submit" class="form__btn btn btn-primary">Заказать</button>
+				</div>
+			</form>
+		</div>
+		<div id="promotion-market" class="popup">
+			<button type="button" data-fancybox-close class="popup__close icon-close"></button>
+			<h2 class="popup__title">Акция на Маркет</h2>
+			<p class="popup__subtitle">Заполните форму и мы свяжемся с вами для уточнения деталей и оформления.</p>
+			<form action="#" class="popup__form form">
+				<input type="text" class="form__control" name="name" placeholder="Ваше имя*">
+				<input type="tel" class="form__control" name="phone" placeholder="Номер телефона*">
+				<textarea name="message" class="form__control" placeholder="Комментарии к заказу"></textarea>
+				<div class="form__bottom">
+					<label class="form__checkbox">
+						<input type="checkbox" name="privacy" checked class="form__checkbox-input hidden" hidden>
+						<span class="form__checkbox-text">Соглашаюсь с&nbsp;использованием моих персональных данных для&nbsp;обработки данного обращения</span>
+					</label>
+					<button type="submit" class="form__btn btn btn-primary">Заказать</button>
+				</div>
+			</form>
+		</div>
 		<div id="callback" class="popup">
 			<button type="button" data-fancybox-close class="popup__close icon-close"></button>
 			<h2 class="popup__title">Отправить заявку</h2>
@@ -833,10 +884,10 @@
 			<h3 class="popup__title">Спасибо, ваша заявка принята!</h3>
 			<button type="button" data-fancybox-close class="popup__btn btn btn-primary">Закрыть</button>
 		</div> <!-- plugins -->
-		<script src="js/libs/fancybox.umd.js?_v=20250609225930"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20250609225930"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20250610121147"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20250610121147"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20250609225930"></script>
+		<script src="js/app.min.js?_v=20250610121147"></script>
 	</div>
 </body>
 
